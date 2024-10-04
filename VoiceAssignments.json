@@ -1,0 +1,88 @@
+{
+    "Character": [
+        {
+            "ID": "1",
+            "Name": "Anderson",
+            "Voice ID": "tG5bw06DXQnuqEU3nPAq",
+            "Voice Name": "Gwen"
+        },
+        {
+            "ID": "2",
+            "Name": "Aryn",
+            "Voice ID": "w4Z9gYJrajAuQmheNbVn",
+            "Voice Name": "Haseeb"
+        },
+        {
+            "ID": "3",
+            "Name": "Jasper",
+            "Voice ID": "YsvxlKAiTeA2VGZGnQI9",
+            "Voice Name": "Ian"
+        },
+        {
+            "ID": "4",
+            "Name": "Tera",
+            "Voice ID": "98oS1BxL32fKBh1KbTej",
+            "Voice Name": "Hannah"
+        },
+        {
+            "ID": "5",
+            "Name": "Toppo",
+            "Voice ID": "zadbHdSgYi0Gxv83seiu",
+            "Voice Name": "Amy"
+        },
+        {
+            "ID": "6",
+            "Name": "DANI",
+            "Voice ID": "7lPmLyH8LTIjrTh30WzR",
+            "Voice Name": "DANI"
+        },
+        {
+            "ID": "7",
+            "Name": "Automated System",
+            "Voice ID": "GBv7mTt0atIp3Br8iCZE",
+            "Voice Name": "Thomas"
+        },
+        {
+            "ID": "8",
+            "Name": "Mission Control",
+            "Voice ID": "H1JjD7OHmS3KIOu5PDkI",
+            "Voice Name": "Kim"
+        },
+        {
+            "ID": "9",
+            "Name": "Player",
+            "Voice ID": "3XOBzXhnDY98yeWQ3GdM",
+            "Voice Name": "Brayden"
+        },
+        {
+            "ID": "10",
+            "Name": "Player",
+            "Voice ID": "PoHUWWWMHFrA8z7Q88pu",
+            "Voice Name": "Miranda"
+        },
+        {
+            "ID": "11",
+            "Name": "Player",
+            "Voice ID": "z5RTzOyJdFDd9rah0KmY",
+            "Voice Name": "Yomiee"
+        },
+        {
+            "ID": "12",
+            "Name": "Player",
+            "Voice ID": "GCvHMwMlEOnug5ZYBiUw",
+            "Voice Name": "Nicoletta"
+        },
+        {
+            "ID": "13",
+            "Name": "Player",
+            "Voice ID": "bBcZzZIfBJuKQqB3qXog",
+            "Voice Name": "Tass"
+        },
+        {
+            "ID": "14",
+            "Name": "Player",
+            "Voice ID": "ETaPGHnbwEZwP0ymNX3Y",
+            "Voice Name": "Joey"
+        }
+    ]
+}
