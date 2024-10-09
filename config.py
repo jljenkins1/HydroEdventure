@@ -1,8 +1,14 @@
 CONFIG = {
+    'voice_csv': {
+        'character_column': 'Character',
+        'voice_id_column': 'Voice ID',
+        'voice_name_column': 'Voice Name',
+    },
+
     'csv': {
         'entrytag_column': 'entrytag',
         'dialogue_text_column': 'DialogueText',
-        'skip_header_rows': 1,
+        'skip_rows': 1,
         'delimiter': ',',
     },
     'character_name_extraction': {

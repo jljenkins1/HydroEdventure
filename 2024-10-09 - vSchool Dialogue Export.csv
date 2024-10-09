@@ -1,0 +1,824 @@
+﻿Database
+Name,Version,Author,Description,Emphasis1,Emphasis2,Emphasis3,Emphasis4
+New Dialogue Database,,,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
+Global User Script
+
+Conversations
+ID,Title,Description,Actor,Conversant,Overrides
+Number,Text,Text,Actor,Actor,JSON
+1,M32.3 - Gym - Emma - Lockers,Player speaks with Emma in Gym about Lockers. ,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+2,M37.1 - Gym - Coach - Warm Up,Coach tells player to warm up,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+3,M37.2 - Gym - Sofia - Make Team,Sofia tells player she want to make team,1,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+4,M32.1 - Gym - Coach - Put Things Away,,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+5,M36.1 - Gym - Coach - Team Divide,Coach tells player to divide into teams,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+6,M36.2 - Gym - Coach - Here Catch,Coach throws the ball to player,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+7,M36.3 - Gym - Zoe - Rules,Zoe asks player the rules,14,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+8,M17.1 - Gym - Sofia - I'm Open,Sofia asks player to pass her the ball,5,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+9,M19 - Gym - Luis - Left Out,,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+10,M26.1 - Gym - Aiden - Lost Ball,Aiden's ball rolls to the player's feet,2,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+11,M26.2 - Gym - Aiden - Thanks,Aiden thanks player after receiving the ball. ,2,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+12,M29.1 - Gym - Dion and Jason - Fight,Jason hits Dion with the basketball,7,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+13,M29.2 - Gym - Dion and Jason - Player Response,"Player response to Dion and Jason's ""fight""",1,-1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+14,M4 - Gym - Dion and Jason - Hit Jason,,7,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+15,M8 - Gym - Kayla - Lonely,Kayla says she doesn't fit in.,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+16,M41 - Gym - Leo - How to Dribble,Leo asks the player how to dribble a ball.,9,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+17,M24.1 - Gym - Coach - Bus is Here,Coach announces that the bus is at the school.,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+18,M24.2 - Gym - Aiden - Lost Glove,Aiden drops his gloves. ,2,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+19,M17.2 - Gym - Sofia - Sofia Misses,Player responds to Sofia missing a basket,5,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+20,M3 - Cooking - Jason and Dion - Bump,Dion bumps into Jason,7,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+21,M18.1 - Cooking - Teacher - Intro to Luis ,Teacher introduces player to Luis,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+22,M18.2 - Cooking - Luis - New Kid,Player chooses where to sit,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+23,M18.3 - Cooking - Teacher - Pizza Intro,Teacher intros pizza activity,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+24,M34 - Cooking - Emma - Pizza Roller,Emma breaks her pizza roller,11,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+25,M40.1 - Cooking - Min - Crush Confession,Min confesses she has a crush on Dion,3,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+27,M16 - Cooking - Leo - Mispronunciation,Leo mispronounces pepperoni,9,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+28,M7 - Cooking - Zoe - Losing Our House,Zoe tells the player she is losing her house,14,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+29,M11.1 - Cooking - Teacher - Time Warning,Teacher warns players that cooking club ends soon,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+30,M11.2 - Cooking - Emma - Out of Time,Emma isn't going to finish her pizza in time,11,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+31,M30.1 - Cooking - Teacher - Move to Science Club,Teacher tells the player to move to science club. ,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+32,M30.2 - Cooking - Teacher - Go to Science Club,Teacher reminds player to join science club,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+33,M32.2 - Gym - Coach - Put Stuff Up Reminder,Coach reminds player to put stuff away,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+34,M30.3 - Cooking - Jason and Kayla - Who's Better,Jason and Kayla argue over who's better at basketball,6,10,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+35,M30.4 - Cooking - Jason and Kayla - Peacemaker,Player choice as Jason and Kayla argue,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+36,M30.5 - Cooking -  Teacher - Reminder Three,Teacher reminds player to join science club,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+37,Intro.1 - Cooking - None - Intro Prompt,Introduction ,-1,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+38,Intro.2 - Cooking - Teacher - Join Cooking Club,Teacher invites player to join cooking club table,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+39,Intro.3 - Cooking - Teacher - No Response Cooking Club,Teacher reply to player who fails to join the cooking club. ,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+40,M32.2B - Gym - Coach - Reminder,Coach reminds player to put things away,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+41,M21 - Science - Leo and Luis - Sit by New Kid,Player has to choose whether to sit by new kid. ,7,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+42,M1.2 - Science - Leo and Sofia - Mispronounced Word,Leo mispronounces a word.,9,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+43,M1.1 - Science - Teacher - Slime Rules,Teacher intros slime activity,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+44,M10.1 - Science - Dion - Lost Tablet,Dion asks if player has seen his Tablet,7,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+45,M10.2 - Science - Dion - Player Returns iPad,Dion's response if player returns iPad,7,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+46,M14.1 - Science - Luis - Stuck Glue,Luis can't get glue to pour out.,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+47,M14.2 - Science - Luis - Player Fixes Glue,Response if player fixes Luis' glue. ,1,4,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+48,M27.1 - Science - Min and Sofia - Slime Fight,Min and Sofia argue over slime activity,3,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+50,M13 - Science - Leo - Asks for Help,Leo asks for help on slime activity.,9,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+51,M31 - Science - Emma - Forgot Phone Charger,Emma forgot her phone charger and asks to borrow one. ,11,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+52,M15 - Science - Aiden - Slime Success,Aiden exclaims that he was successful with the slime activity.,2,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+53,M28.1 - Science - Teacher - Clean Up,Teacher tells player to clean up and go to Art Club. ,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+54,M28.2 - Science - Aiden - Water Bottle Toss,,2,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+55,M25.1 - Science - Luis - Trash Left Behind,Luis comments that someone left their trash behind. ,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+56,M25.2 - Science - Teacher - Notify of Trash,Player notifies teacher of the trash.,1,12,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+57,M25.3 - Science -Teacher - Go to Art Club,Teacher tells player to go to Art Club,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+58,M25.4 - Science - Teacher - Reminder to Go to Art ,Teacher reminds player to go to Art Club.,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+59,M25.5 - Science - Teacher - Forced to Art Club,Teacher reply if player forced to Art Club. ,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+60,M22.1 - Art - Kayla - Drop Supplies,Kayla drops art supplies. ,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+61,M22.2 - Art - Kayla - Response to Drop,Player response to dropped art supplies,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+62,M22.3 - Art - Teacher - Player Asks Teacher to Help,Player asks teacher to help Kayla,1,12,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+63,M22.4 - Art - Kayla - Help Reply,Kayla thanks player for help,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+64,M20.1 - Art -Teacher - Art Instructions,Teacher gives art activity instructions,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+65,M20.2 - Art - Luis - Luis and Player Pair Up,Luis and player partner for art activity,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+66,M20.3 - Art - Kayla - No Partner,Kayla realizes she has no partner,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+67,M2 - Art - Zoe - Ruined Project,Zoe yells at Aiden for breaking her project.,14,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+68,M33.1 - Art - Leo - Missing Paint Color,Leo says he's missing a color of paint he wants. ,9,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+69,M33.2 - Art - Leo - Leo Thanks Player,Leo thanks player for loaning them paint. ,9,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+70,M38.1 - Art - Luis - Old School Blues,Luis misses his old school. ,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+71,M38.2 - Art - Emma - Asks What Luis Said ,Emma asks player what Luis said,11,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+72,M39.1 - Art - Teacher - Asks to See Sofia and Jason,Teacher asks to see Sofia and Jason,12,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+73,M39.2 - Art - Sofia - Bad Grade,Sofia says she got a bad grade,5,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+74,M6 - Art - Zoe - Min Cheated,Zoe tells the player that Min cheated.,14,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+75,M12.1 - Art - Jason - Behind on Work,Teacher tells Jason he's behind on work. ,12,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+76,M12.2 - Art - Jason - Returns to Table Sadly,Jason returns to the table. ,6,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+77,M12.3 - Art - Teacher - 10 Seconds Left,Teacher warns player about limited time. ,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+78,M12.4 - Art - Teacher - Go to Gym,Teacher tells player to go to the gym,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+79,M12.5 - Art - Teacher - Go to Gym Reminder,Teacher reminds player to go to gym.,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+80,M9.1 - Art - Luis - Where's the Bathroom,Luis asks player where the bathroom is.,4,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+81,M9.2 - Art - Teacher - Go to Gym 2,Teacher reminds player to go to the gym.,12,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+82,M5.1 - Bus - Coach - Get in Line,Coach tells player to get in line. ,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+83,M5.2 - Bus - Min - Exclude Sofia,Min suggests leaving Sofia out of basketball. ,3,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+84,M23 - Bus - Jason - Struggling on Bus,Jason has trouble boarding the bus,6,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+85,M35 - Bus - Kayla - Nowhere to Sit,Kayla can't find a bus seat. ,10,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+86,Outro - Bus - Coach - See You Tomorrow,Coach says goodbye,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+DialogueEntries
+entrytag,ConvID,ID,Actor,Conversant,Title,MenuText,DialogueText,IsGroup,FalseConditionAction,ConditionPriority,Conditions,Script,Sequence,Description,Response Menu Sequence,EventGuid,canvasRect
+Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Text,Text,Text,Text,Text,Text
+1_Emma_0,1,0,11,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},504;72
+1_Player_1,1,1,1,11,,"Say, ""You can share a locker with me.""",You can share a locker with me.,False,Block,Normal,,,,,{{omit}},{{omit}},312;241.1765
+1_Player_2,1,2,1,11,OnTimeout,Don't say anything; someone else might offer to share so that you don't have to.,,False,Block,Normal,,,,,{{omit}},{{omit}},96;240
+1_Player_3,1,3,1,11,,"Say, “Maybe you can ask the coach where to put your things.”",Maybe you can ask the coach where to put your things.,False,Block,Normal,,,,,{{omit}},{{omit}},529.1765;238.8235
+1_Player_4,1,4,1,-1,,"Say, ""Uh, my locker is full...""","Uh, my locker is full...",False,Block,Normal,,,,,{{omit}},{{omit}},744;240
+1_Emma_9,1,9,11,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},312;312
+1_Emma_10,1,10,11,1,,,Aw man! There aren't any more lockers left!,False,Block,Normal,,,,,{{omit}},{{omit}},504;144
+2_Coach_0,2,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},576;43
+2_Coach_1,2,1,13,1,,,"Today we’re going to divide into two teams and play a game of basketball. Take some time to warm up first, before I put you into teams.",False,Block,Normal,,,,,{{omit}},{{omit}},579;100.0566
+3_Player_0,3,0,1,5,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},576;48
+3_Sofia_1,3,1,5,1,,,Look how good she is. You’re pretty good too. I’ll never be that good! I want to try out for the basketball team but I’m not very good at shooting. Could you help?,False,Block,Normal,,,,,{{omit}},{{omit}},576;96
+3_Player_2,3,2,1,5,,"Say, ""I need to work on my own skills so I can make the team too.""",I need to work on my own skills so I can make the team too.,False,Block,Normal,,,,,{{omit}},{{omit}},72;168
+3_Player_3,3,3,1,5,,"Say, “You can practice with me before school if you want to.”",You can practice with me before school if you want to.,False,Block,Normal,,,,,{{omit}},{{omit}},288;168
+3_Player_4,3,4,1,5,OnTimeout,"Say, “You should practice more.”",You should practice more.,False,Block,Normal,,,,,{{omit}},{{omit}},504;168
+3_Player_5,3,5,1,5,,"Say, “I’ll show you some tips the coach showed me while we play.”",I’ll show you some tips the coach showed me while we play.,False,Block,Normal,,,,,{{omit}},{{omit}},720;168
+3_Player_6,3,6,1,5,,"Say, “Well, I’m too busy to help you.”","Well, I’m too busy to help you.",False,Block,Normal,,,,,{{omit}},{{omit}},936;168
+3_Sofia_7,3,7,5,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},288;218
+3_Sofia_8,3,8,5,1,,,Yeah...,False,Block,Normal,,,,,{{omit}},{{omit}},504;218
+3_Sofia_9,3,9,5,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},720;218
+4_Coach_0,4,0,13,1,START,,,False,Block,Normal,,,None();,,{{omit}},{{omit}},528;24
+4_Coach_1,4,1,13,1,,,Hey kids! Go find a locker and put your stuff away.,False,Block,Normal,,,,,,{{omit}},528;96
+5_Coach_0,5,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},528;48
+5_Coach_1,5,1,13,1,,,"Alright now that you’ve had time to warm-up, Team #1 will be Sofia, Min, and you. Team #2 will be Leo, Zoe, and Kayla. ",False,Block,Normal,,,,,{{omit}},{{omit}},528;120
+6_Coach_0,6,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},504;72
+6_Coach_1,6,1,13,1,,,"Alright, Team #1 will start the game. Here catch!",False,Block,Normal,,,,,{{omit}},{{omit}},504;144
+7_Zoe_0,7,0,14,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},504;72
+7_Zoe_1,7,1,14,1,,,Wait what are the rules again? I’ve only played basketball once before.,False,Block,Normal,,,,,{{omit}},{{omit}},504;122
+7_Player_2,7,2,1,14,OnTimeout,Pretend not to hear.,,False,Block,Normal,,,,,{{omit}},{{omit}},120.9434;192
+7_Player_3,7,3,1,14,,Laugh quietly and continue the game.,,False,Block,Normal,,,,,{{omit}},{{omit}},336;192
+7_Player_4,7,4,1,14,,"Say, “You try to get the basketball into the other team’s basket. I’ll tell you more as we play.” ",You try to get the basketball into the other team’s basket. I’ll tell you more as we play.,False,Block,Normal,,,,,{{omit}},{{omit}},552;192
+7_Player_5,7,5,1,14,,"Say, “Just follow what I do.”",Just follow what I do.,False,Block,Normal,,,,,{{omit}},{{omit}},768;192
+7_Zoe_6,7,6,14,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},552;242
+8_Sofia_0,8,0,5,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},288;29
+8_Sofia_1,8,1,5,1,,,Pass me the ball! I’m open.,False,Block,Normal,,,,,{{omit}},{{omit}},287;82
+9_Luis_0,9,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},315;37
+9_Luis_1,9,1,4,1,,,"Man, I know your game has already started, but I wanted to play.",False,Block,Normal,,,,,{{omit}},{{omit}},313;110
+9_Player_2,9,2,1,4,OnTimeout,Ignore Luis and continue the game. ,,False,Block,Normal,,,,,{{omit}},{{omit}},23;200
+9_Player_3,9,3,1,4,,Shout across the court to Luis “Hey! Want to come play with us?”,Hey! Want to come play with us?,False,Block,Normal,,,,,{{omit}},{{omit}},213;200
+9_Player_4,9,4,1,4,,Walk over to Luis and ask them “Do you want to join our game?”,Do you want to join our game?,False,Block,Normal,,,,,{{omit}},{{omit}},406;200
+9_Player_5,9,5,1,4,,"Say, “The game has already started.” ",The game has already started.,False,Block,Normal,,,,,{{omit}},{{omit}},585;199
+9_Luis_6,9,6,4,1,,,Sure. Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},213;250
+9_Luis_7,9,7,4,1,,,Sure. Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},406;250
+9_Luis_8,9,8,4,1,,,Ugh...,False,Block,Normal,,,,,{{omit}},{{omit}},585;249
+10_Aiden_0,10,0,2,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},302;21
+10_Aiden_1,10,1,2,1,,,"Oops, that’s our ball.",False,Block,Normal,,,,,{{omit}},{{omit}},299.0566;76
+10_Player_2,10,2,1,2,,Pick up the ball and throw it back to them. ,,False,Block,Normal,,,,,{{omit}},{{omit}},30;138
+10_Player_3,10,3,1,2,,Stop the ball from rolling further and wait for him to come get the ball. ,,False,Block,Normal,,,,,{{omit}},{{omit}},216;137
+10_Player_4,10,4,1,2,OnTimeout,Ignore the ball. Keep shooting your ball. ,,False,Block,Normal,,,,,{{omit}},{{omit}},403;136
+10_Player_5,10,5,1,2,,Kick the ball in the opposite direction.,,False,Block,Normal,,,,,{{omit}},{{omit}},582;134
+10_Aiden_6,10,6,2,1,,,Pass it here.,False,Block,Normal,,,,,{{omit}},{{omit}},30;188
+10_Aiden_7,10,7,2,1,,,Hey!,False,Block,Normal,,,,,{{omit}},{{omit}},582;184
+11_Aiden_0,11,0,2,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+11_Aiden_1,11,1,2,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+12_Dion_0,12,0,7,6,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+12_Dion_1,12,1,7,6,,,You did that on purpose!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+12_Jason_2,12,2,6,7,,,"No, I didn’t!",False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+12_Dion_3,12,3,7,6,,,You're a jerk!!,False,Block,Normal,,,,,{{omit}},{{omit}},30;170
+13_Player_0,13,0,1,-1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},282;30
+13_Player_2,13,2,1,1,OnTimeout,Silently watch them argue but don’t get involved.,,False,Block,Normal,,,,,{{omit}},{{omit}},90;118
+13_Player_3,13,3,1,1,,"Say, “Calm down. It was an accident.”",Calm down. It was an accident.,False,Block,Normal,,,,,{{omit}},{{omit}},200;199
+13_Player_4,13,4,1,1,,"Say, “Dion should get to throw the ball back to settle the score.”",Dion should get to throw the ball back to settle the score.,False,Block,Normal,,,,,{{omit}},{{omit}},368;147
+13_Player_5,13,5,1,1,,Quietly Laugh.,,False,Block,Normal,,,,,{{omit}},{{omit}},560;155
+13_Player_6,13,6,1,1,,"Say, ""Coach! They are fighting!”",Coach! They are fighting!,False,Block,Normal,,,,,{{omit}},{{omit}},582.9562;77.98688
+14_Dion_0,14,0,7,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},313;23
+14_Dion_1,14,1,7,1,,,"Hey! Let’s play a new game called ""let’s hit Jason.""",False,Block,Normal,,,,,{{omit}},{{omit}},307;77
+14_Player_3,14,3,1,7,,Say “Eh. I’d rather play something else.”,Eh. I’d rather play something else.,False,Block,Normal,,,,,{{omit}},{{omit}},38;193
+14_Player_4,14,4,1,7,,Say “Hey! Stop it.” to Dion.  ,Hey! Stop it.,False,Block,Normal,,,,,{{omit}},{{omit}},254;206
+14_Player_5,14,5,1,7,,Say “Sounds like a fun game!” ,Sounds like a fun game!,False,Block,Normal,,,,,{{omit}},{{omit}},448;209
+14_Player_6,14,6,1,7,OnTimeout,Stay quiet and see what others say. ,,False,Block,Normal,,,,,{{omit}},{{omit}},631;200
+14_Dion_8,14,8,7,1,,,Hmmph...,False,Block,Normal,,,,,{{omit}},{{omit}},58;272
+14_Dion_9,14,9,7,1,,,Hmmph...,False,Block,Normal,,,,,{{omit}},{{omit}},278;286
+15_Kayla_0,15,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},315;32
+15_Kayla_1,15,1,10,1,,,I just feel like I don't fit in here.,False,Block,Normal,,,,,{{omit}},{{omit}},310;98
+15_Player_2,15,2,1,10,,"Say, “You’re not alone. Sometimes I feel the same way.” ",You’re not alone. Sometimes I feel the same way.,False,Block,Normal,,,,,{{omit}},{{omit}},17;201
+15_Player_3,15,3,1,10,,Say “Don’t worry. You’re doing fine.”  ,Don’t worry. You’re doing fine.,False,Block,Normal,,,,,{{omit}},{{omit}},212;197
+15_Player_4,15,4,1,10,,"Say, “Not my problem.” ",Not my problem.,False,Block,Normal,,,,,{{omit}},{{omit}},398;196
+15_Player_5,15,5,1,10,OnTimeout,Walk past her and pretend not to hear. ,,False,Block,Normal,,,,,{{omit}},{{omit}},577;196
+15_Kayla_6,15,6,10,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},212;247
+15_Kayla_7,15,7,10,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},17;251
+16_Leo_0,16,0,9,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},295;32
+16_Leo_1,16,1,9,1,,,You are so good at dribbling. How do you do it? I always lose the ball.,False,Block,Normal,,,,,{{omit}},,296;97
+16_Player_2,16,2,1,9,,"Say ""How can you not know how to do it?""",How can you not know how to do it?,False,Block,Normal,,,,,{{omit}},{{omit}},23;198
+16_Player_3,16,3,1,9,,Say “Let me show you what I do.” ,Let me show you what I do.,False,Block,Normal,,,,,{{omit}},{{omit}},203;198
+16_Player_4,16,4,1,9,OnTimeout,Say “I don’t know. I guess I’m just good at it.”,I don’t know. I guess I’m just good at it.,False,Block,Normal,,,,,{{omit}},{{omit}},381;197
+16_Player_5,16,5,1,9,,"Say ""I don’t know, let’s get the coach to show you how.""","I don’t know, let’s get the coach to show you how.",False,Block,Normal,,,,,{{omit}},{{omit}},564;196
+16_Leo_6,16,6,9,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},564;246
+16_Leo_7,16,7,9,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},203;248
+17_Coach_0,17,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;18
+17_Coach_1,17,1,13,1,,,The bus is almost here. Line up outside to get on. We’re running behind so get there as quickly as you can. We wouldn’t want anyone to miss it!,False,Block,Normal,,,,,{{omit}},{{omit}},30;69
+18_Aiden_0,18,0,2,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},297;62
+18_Aiden_1,18,1,2,1,,,"My mom’s out front, see you guys tomorrow!",False,Block,Normal,,,,,{{omit}},{{omit}},295.9417;121.0291
+18_Player_2,18,2,1,2,OnTimeout,Leave it and continue to your bus.,,False,Block,Normal,,,,,{{omit}},{{omit}},18;199
+18_Player_3,18,3,1,2,,Pick it up and turn it in at the lost and found tomorrow morning.,,False,Block,Normal,,,,,{{omit}},{{omit}},208;200
+18_Player_4,18,4,1,2,,"Pick it up, return it to Aiden, then continue to the bus.",,False,Block,Normal,,,,,{{omit}},{{omit}},397;202
+18_Player_5,18,5,1,2,,Pick it up and put it in your pocket to keep for yourself.,,False,Block,Normal,,,,,{{omit}},{{omit}},581;197
+18_Player_6,18,6,1,2,,,"Hey, you dropped your gloves!",False,Block,Normal,,,,,{{omit}},{{omit}},397;252
+18_Aiden_7,18,7,2,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},397;302
+19_Sofia_0,19,0,5,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},322;52
+19_Player_1,19,1,1,5,,Shrug and keep playing.,,False,Block,Normal,,,,,{{omit}},{{omit}},38;129
+19_Player_2,19,2,1,5,,"Say, “Good try. That was a hard one.” ",Good try. That was a hard one.,False,Block,Normal,,,,,{{omit}},{{omit}},242;130
+19_Player_3,19,3,1,5,,"Say, “It’s OK, you’ll make the next basket.”","It’s OK, you’ll make the next basket.",False,Block,Normal,,,,,{{omit}},{{omit}},434;129
+19_Player_4,19,4,1,5,,"Say, “Aww man. How could you miss that!”",Aww man. How could you miss that!,False,Block,Normal,,,,,{{omit}},{{omit}},624;129
+20_Dion_0,20,0,7,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},290;73.67859
+20_Player_1,20,1,1,7,OnTimeout,Ignore and continue to cooking club table.,,False,Block,Normal,,,,,{{omit}},{{omit}},42;153
+20_Player_2,20,2,1,7,,Pick up Jason’s  food.,,False,Block,Normal,,,,,{{omit}},{{omit}},237;154
+20_Player_3,20,3,1,7,,Laugh quietly.,,False,Block,Normal,,,,,{{omit}},{{omit}},414;153
+20_Player_4,20,4,1,7,,Say “Hey! Why you messin’ with him?” to Dion. ,Hey! Why you messin’ with him?,False,Block,Normal,,,,,{{omit}},{{omit}},607;150
+20_Dion_5,20,5,7,1,,,Sorry.,False,Block,Normal,,,,,{{omit}},{{omit}},607;205
+21_Teacher_0,21,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},309;37
+21_Teacher_1,21,1,12,1,,,Have a seat at the table so you can get started. This is Luis. He’s a new student.,False,Block,Normal,,,,,{{omit}},{{omit}},309;87
+22_Luis_0,22,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},354;22
+22_Player_1,22,1,1,4,OnTimeout,Quietly sit beside Luis.,,False,Block,Normal,,,,,{{omit}},{{omit}},26;91
+22_Player_2,22,2,1,4,,"Say “Hi, where’d you come from?” to Luis.","Hi, where’d you come from?",False,Block,Normal,,,,,{{omit}},{{omit}},237.4128;92
+22_Player_3,22,3,1,4,,"Say “Hi, how’s it going?” to Luis.","Hi, how’s it going?",False,Block,Normal,,,,,{{omit}},{{omit}},433;91
+22_Player_4,22,4,1,12,,"Say to the teacher, “Can he sit next to someone else?”",Can he sit next to someone else?,False,Block,Normal,,,,,{{omit}},{{omit}},618.0826;90
+22_Luis_5,22,5,4,1,,,I moved here from another school.,False,Block,Normal,,,,,{{omit}},{{omit}},242;144
+22_Luis_6,22,6,4,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},433;141
+22_Teacher_7,22,7,12,1,,,"Sorry, we have limited seats today.",False,Block,Normal,,,,,{{omit}},{{omit}},619;140
+23_Teacher_0,23,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},271;37
+23_Teacher_1,23,1,12,1,,,"Today, we’re going to be making personal pizzas! You have a variety of ingredients to choose from. Drag and drop them onto your pizza to prepare it.",False,Block,Normal,,,,,{{omit}},{{omit}},271;87
+24_Emma_0,24,0,11,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},245;21
+24_Emma_1,24,1,11,1,,,"Ah man, I broke my pizza roller! I needed it for my dough.",False,Block,Normal,,,,,{{omit}},{{omit}},239;77
+24_Player_2,24,2,1,11,OnTimeout,Look away and complete the activity.,,False,Block,Normal,,,,,{{omit}},{{omit}},18;121
+24_Player_3,24,3,1,11,,"Say, “That's too bad.” ",That's too bad. ,False,Block,Normal,,,,,{{omit}},{{omit}},76;193
+24_Player_4,24,4,1,11,,"Say, “Maybe you can ask the teacher if there’s an extra you can have.”",Maybe you can ask the teacher if there’s an extra you can have.,False,Block,Normal,,,,,{{omit}},{{omit}},145;288
+24_Player_5,24,5,1,11,,"Say, “You can borrow mine.”",You can borrow mine.,False,Block,Normal,,,,,{{omit}},{{omit}},399;285
+24_Player_7,24,7,1,11,,"Say, “Not my problem.”",Not my problem.,False,Block,Normal,,,,,{{omit}},{{omit}},474;111
+24_Emma_8,24,8,11,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},399;335
+25_Min_0,25,0,3,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},281;26
+25_Min_1,25,1,3,1,,,"I think you heard me and Sofia talking earlier …about how I have a crush on Dion. Please don’t tell anyone, okay?",False,Block,Normal,,,,,{{omit}},{{omit}},274;87
+25_Player_2,25,2,1,3,OnTimeout,Shrug and continue making your pizza.,,False,Block,Normal,,,,,{{omit}},{{omit}},7;174
+25_Player_3,25,3,1,3,,"Say, “Ok. I promise I won’t tell anyone.”",Ok. I promise I won’t tell anyone.,False,Block,Normal,,,,,{{omit}},{{omit}},190;170
+25_Player_4,25,4,1,3,,"Whisper to Luis, “Did you know that Min has a crush on Dion?”",Did you know that Min has a crush on Dion?,False,Block,Normal,,,,,{{omit}},{{omit}},369;168
+25_Player_5,25,5,1,3,,Say “Sure.”,Sure.,False,Block,Normal,,,,,{{omit}},{{omit}},544;166
+27_Leo_0,27,0,9,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},241;17
+27_Leo_1,27,1,9,1,,,Do you have any preperoon? Is that how you say it?,False,Block,Normal,,,,,{{omit}},{{omit}},240;72
+27_Player_2,27,2,1,9,OnTimeout,"Smile and nod like you understand, but don’t bother to really understand.",,False,Block,Normal,,,,,{{omit}},{{omit}},27;101
+27_Player_3,27,3,1,9,,"Say “Oh, you mean pepperoni?”","Oh, you mean pepperoni?",False,Block,Normal,,,,,{{omit}},{{omit}},77;178
+27_Player_4,27,4,1,9,,"Say,  “Sorry, I don’t understand. Can you say that again?” ","Sorry, I don’t understand. Can you say that again?",False,Block,Normal,,,,,{{omit}},{{omit}},244;238
+27_Player_6,27,6,1,9,,"Say, “I’m busy. Can you talk to someone else?”",I’m busy. Can you talk to someone else?,False,Block,Normal,,,,,{{omit}},{{omit}},471;96
+27_Leo_7,27,7,9,1,,,Do you have any preperoon?,False,Block,Normal,,,,,{{omit}},{{omit}},244;288
+27_Player_8,27,8,1,9,,"Oh you meant pepperoni! Sorry, I don’t have any extra.",,False,Block,Normal,,,,,{{omit}},{{omit}},245;338
+27_Leo_10,27,10,9,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},544;142
+28_Zoe_0,28,0,14,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},279;15
+28_Zoe_1,28,1,14,1,,,I don’t know if I told you yet but my family is losing our house and I’m going to have to change schools!,False,Block,Normal,,,,,{{omit}},{{omit}},279;71
+28_Player_2,28,2,1,14,OnTimeout,"Say, “I'm sorry. That’s too bad.”",I'm sorry. That’s too bad.,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+28_Player_3,28,3,1,14,,"Say, “Wherever you’re going, I’m sure you’ll make great friends.” ","Wherever you’re going, I’m sure you’ll make great friends.",False,Block,Normal,,,,,{{omit}},{{omit}},163;182
+28_Player_4,28,4,1,14,,"Say, “You shouldn’t tell your family’s business like that.” ",You shouldn’t tell your family’s business like that.,False,Block,Normal,,,,,{{omit}},{{omit}},282;123
+28_Player_5,28,5,1,14,,"Say, “Uh…Not my problem.”",Uh…Not my problem.,False,Block,Normal,,,,,{{omit}},{{omit}},452;176
+28_Player_6,28,6,1,14,,"Say, “Oh! That’s random.”",Oh! That’s random.,False,Block,Normal,,,,,{{omit}},{{omit}},500;121
+28_Zoe_7,28,7,14,1,,,Thanks. I hope so.,False,Block,Normal,,,,,{{omit}},{{omit}},163;232
+29_Teacher_0,29,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+29_Teacher_1,29,1,12,1,,,You only have a few more minutes to finish your pizzas.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+30_Emma_0,30,0,11,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},282;21
+30_Emma_1,30,1,11,1,,,Oh no! There’s no way I’m going to finish in time!,False,Block,Normal,,,,,{{omit}},{{omit}},284;70
+30_Player_2,30,2,1,11,OnTimeout,Continue working on your own pizza.,,False,Block,Normal,,,,,{{omit}},{{omit}},12;119
+30_Player_3,30,3,1,11,,"Say, “I can help you finish.”", I can help you finish.,False,Block,Normal,,,,,{{omit}},{{omit}},190;119
+30_Player_4,30,4,1,11,,"Say, “I can help you, but only for a minute.”","I can help you, but only for a minute.",False,Block,Normal,,,,,{{omit}},{{omit}},369;119
+30_Player_5,30,5,1,11,,"Say, “You really should have worked faster.”",You really should have worked faster.,False,Block,Normal,,,,,{{omit}},{{omit}},543;119
+30_Emma_6,30,6,11,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},190;169
+30_Emma_7,30,7,11,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},368;170
+31_Teacher_0,31,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+31_Teacher_1,31,1,12,1,,,Nice job! The cook will pick up the pizzas to put in the fridge while you head over to Science Club.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+32_Teacher_0,32,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+32_Teacher_1,32,1,12,1,,,"Science Club is starting, come over here.",False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+33_Coach_0,33,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+33_Coach_1,33,1,13,1,,,Remember to put your things away in the lockers over there.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+34_Jason_0,34,0,6,10,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+34_Jason_1,34,1,6,10,,,You’re crazy if you think you can beat me at basketball! I can’t believe you’d even say that!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+34_Kayla_2,34,2,10,6,,,Are you kidding? I’m way better than you. Remember the last time we played?!! What do you think?,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+35_Player_0,35,0,1,6,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},237;20
+35_Player_1,35,1,1,6,OnTimeout,Ignore and continue to the Science Club table.,,False,Block,Normal,,,,,{{omit}},{{omit}},29;71
+35_Player_2,35,2,1,6,,Quietly watch the situation unfold.,,False,Block,Normal,,,,,{{omit}},{{omit}},143;136
+35_Player_3,35,3,1,6,,"Say, “I agree with Kayla, she could beat you no problem!” ","I agree with Kayla, she could beat you no problem!",False,Block,Normal,,,,,{{omit}},{{omit}},240;71
+35_Player_4,35,4,1,6,,"Say, “You guys are both great.”",You guys are both great.,False,Block,Normal,,,,,{{omit}},{{omit}},369;131
+35_Player_5,35,5,1,6,,"Say, “Calm down. It’s no big deal.”",Calm down. It’s no big deal.,False,Block,Normal,,,,,{{omit}},{{omit}},471;71
+36_Teacher_0,36,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+36_Teacher_1,36,1,12,1,,,Come join Science Club!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+invalid_entrytag,37,0,-1,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+37_Player_1,37,1,1,-1,,,"Welcome to vSchool! As you proceed, you’ll interact with other students. You’ll get to choose what to do. Please make the choices that are closest to what you would do in real life. \nIt’s the end of the school day. You’ll be attending an after-school program that will be starting soon! You will start at the cooking club. ",False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+38_Teacher_0,38,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+38_Teacher_1,38,1,12,1,,,Cooking Club has started! Come find a seat so you don’t miss out!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+39_Teacher_0,39,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+39_Teacher_1,39,1,12,1,,,Welcome to Cooking Club.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+40_Coach_0,40,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+40_Coach_1,40,1,13,1,,,You need to put your stuff up in order to play.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+41_Dion_0,41,0,7,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},313;11
+41_Dion_1,41,1,7,1,,,"Look, it’s the new kid.",False,Block,Normal,,,,,{{omit}},{{omit}},313;69
+41_Player_2,41,2,1,4,,"Sit down next to Luis and say “Hi, what’s up?”","Hi, what’s up?",False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+41_Player_3,41,3,1,4,,Say “Is this seat taken? Can I sit here?” to Luis.,Is this seat taken? Can I sit here?,False,Block,Normal,,,,,{{omit}},{{omit}},214;120
+41_Player_4,41,4,1,7,OnTimeout,Quietly sit down.,,False,Block,Normal,,,,,{{omit}},{{omit}},396.9011;118
+41_Player_5,41,5,1,4,,"Ask, “Can you go sit somewhere else? I want to sit with my friends.""",Can you go sit somewhere else? I want to sit with my friends.,False,Block,Normal,,,,,{{omit}},{{omit}},575;117
+41_Luis_6,41,6,4,1,,,Not much.,False,Block,Normal,,,,,{{omit}},{{omit}},30;170
+41_Luis_7,41,7,4,1,,,No. Sure.,False,Block,Normal,,,,,{{omit}},{{omit}},214;170
+41_Luis_8,41,8,4,1,,,"No, I don't want to. ",False,Block,Normal,,,,,{{omit}},{{omit}},575;167
+42_Leo_0,42,0,9,5,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},305;22
+42_Leo_1,42,1,9,5,,,You only chose 4 ingerdeents…,False,Block,Normal,,,,,{{omit}},{{omit}},304;72
+42_Sofia_2,42,2,5,9,,,"Ha, that’s not how you say ingredients!",False,Block,Normal,,,,,{{omit}},{{omit}},300;121
+42_Player_4,42,4,1,5,,Say “That’s not cool!” to Sofia.,That’s not cool!,False,Block,Normal,,,,,{{omit}},{{omit}},51;206
+42_Player_5,42,5,1,5,,Scowl at Sofia. ,,False,Block,Normal,,,,,{{omit}},{{omit}},225;200
+42_Player_6,42,6,1,5,,"Say, “Yeah - Leo can’t even read!!!” ",Yeah - Leo can’t even read!!!,False,Block,Normal,,,,,{{omit}},{{omit}},379;267
+42_Player_8,42,8,1,5,OnTimeout,Stay quiet and look away.,,False,Block,Normal,,,,,{{omit}},{{omit}},508;201
+43_Teacher_0,43,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+43_Teacher_1,43,1,12,1,,,Today’s science challenge is to make the perfect slime using the materials on your workspace. Here are the instructions for the activity.,False,Block,Normal,,,,,{{omit}},{{omit}},30;69
+44_Dion_0,44,0,7,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},299;22
+44_Dion_1,44,1,7,1,,,"Hey, have you seen a tablet? I lost mine. I’m going to get in so much trouble if I can’t find it soon.",False,Block,Normal,,,,,{{omit}},{{omit}},299;70
+44_Player_2,44,2,1,7,,"Say, “I haven’t seen it.”",I haven’t seen it.,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+44_Player_3,44,3,1,7,OnTimeout,"Say, “Not my problem,” and continue the activity.",Not my problem.,False,Block,Normal,,,,,{{omit}},{{omit}},212;119
+44_Player_4,44,4,1,7,,"Say, “Could you have left it in your last class?”",Could you have left it in your last class?,False,Block,Normal,,,,,{{omit}},{{omit}},394;118
+44_Player_5,44,5,1,7,,"Say, “I’ll help you look for the tablet.” ",I’ll help you look for the tablet.,False,Block,Normal,,,,,{{omit}},{{omit}},575;117
+44_Dion_6,44,6,7,1,,,Maybe?,False,Block,Normal,,,,,{{omit}},{{omit}},394;168
+45_Dion_0,45,0,7,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+45_Dion_1,45,1,7,1,,,You found it! Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+46_Luis_0,46,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},303;18
+46_Luis_1,46,1,4,1,,,Ugh! I can’t get any glue to come out of this bottle.,False,Block,Normal,,,,,{{omit}},{{omit}},303;67
+46_Player_2,46,2,1,4,OnTimeout,Look away and continue working on your own slime.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+46_Player_3,46,3,1,4,,"Say, “Here, let me try and fix it.” ","Here, let me try and fix it.",False,Block,Normal,,,,,{{omit}},{{omit}},210;119
+46_Player_4,46,4,1,4,,"Say “I don’t know how to fix it, but the teacher might know what to do.” ","I don’t know how to fix it, but the teacher might know what to do.",False,Block,Normal,,,,,{{omit}},{{omit}},387;119
+46_Player_5,46,5,1,4,,Say “Too bad for you.”,Too bad for you.,False,Block,Normal,,,,,{{omit}},{{omit}},568;117
+46_Luis_6,46,6,4,1,,,Okay. ,False,Block,Normal,,,,,{{omit}},{{omit}},387;169
+47_Luis_0,47,0,4,4,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+47_Player_1,47,1,1,4,,,There- I think I fixed it.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+47_Luis_2,47,2,4,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+48_Min_0,48,0,3,5,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},242;24
+48_Min_1,48,1,3,5,,,Why would you want to put that much water in our slime? That makes no sense.,False,Block,Normal,,,,,{{omit}},{{omit}},241;72
+48_Sofia_2,48,2,5,3,,,"Well, your idea was stupid. It wouldn’t have worked either.",False,Block,Normal,,,,,{{omit}},{{omit}},242;117
+48_Min_3,48,3,3,5,,,You’re an idiot! My idea was way better!,False,Block,Normal,,,,,{{omit}},{{omit}},243;167
+48_Player_4,48,4,1,3,OnTimeout,Stay out of it and just watch.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;220
+48_Player_6,48,6,1,3,,"Say, “Calm down guys, work this out.” ","Calm down guys, work this out.",False,Block,Normal,,,,,{{omit}},{{omit}},234;219
+48_Player_7,48,7,1,3,,Say “STOP ARGUING!!!”,STOP ARGUING!!!,False,Block,Normal,,,,,{{omit}},{{omit}},377;272
+48_Player_8,48,8,1,3,,"Say, “Ha! Ha!  She’s right – that is bad!”",Ha! Ha!  She’s right – that is bad!,False,Block,Normal,,,,,{{omit}},{{omit}},450;215
+48_Min_9,48,9,3,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},312;329
+48_Sofia_10,48,10,5,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},512.5357;330.6786
+48_Min_13,48,13,3,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},55.42857;325.25
+48_Sofia_14,48,14,5,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},192.9285;276.1429
+50_Leo_0,50,0,9,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},234;14
+50_Leo_1,50,1,9,1,,,I don’t understand what we’re doing! The teacher says we can have a partner. Can we work together?,False,Block,Normal,,,,,{{omit}},{{omit}},235;64
+50_Player_2,50,2,1,9,OnTimeout,Ignore Leo and keep working on the challenge by yourself.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;119
+50_Player_3,50,3,1,9,,"Say to Leo,  “You can be my partner. I know what the assignment is.” ",You can be my partner. I know what the assignment is.,False,Block,Normal,,,,,{{omit}},{{omit}},137;172
+50_Player_4,50,4,1,9,,"Say, “Sorry, I’m busy.” ",Sorry. I'm busy.,False,Block,Normal,,,,,{{omit}},{{omit}},236;119
+50_Player_5,50,5,1,9,,"Say, “I’ll help you get started, but then I’m gonna work with my friend Zoe.”","I’ll help you get started, but then I’m gonna work with my friend Zoe.",False,Block,Normal,,,,,{{omit}},{{omit}},350;170
+50_Player_6,50,6,1,9,,"Say, ""I'll help you get started, but only for a minute. I gotta do my own work.""","I'll help you get started, but only for a minute. I gotta do my own work.",False,Block,Normal,,,,,{{omit}},{{omit}},438;116
+50_Leo_7,50,7,9,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},137;222
+51_Emma_0,51,0,11,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},290;19
+51_Emma_1,51,1,11,1,,,"I think I forgot my phone charger, but my phone’s dead and I really need to call my mom after this. Does anyone have one I can use?",False,Block,Normal,,,,,{{omit}},{{omit}},289;69
+51_Player_2,51,2,1,11,OnTimeout,Wait and see if someone else has a charger.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+51_Player_3,51,3,1,11,,"Say, “No. You forgot again! You’ll just lose mine. Bring your own.” ",No. You forgot again! You’ll just lose mine. Bring your own.,False,Block,Normal,,,,,{{omit}},{{omit}},209;120
+51_Player_4,51,4,1,11,,Say “You can use the office phone.” ,You can use the office phone.,False,Block,Normal,,,,,{{omit}},{{omit}},386;119
+51_Player_5,51,5,1,11,,"Say, “Yeah, you can use mine.”  ","Yeah, you can use mine.",False,Block,Normal,,,,,{{omit}},{{omit}},565;119
+51_Emma_6,51,6,11,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},565;169
+52_Aiden_0,52,0,2,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},271;25
+52_Aiden_1,52,1,2,1,,,"Look, I did it! It worked!",False,Block,Normal,,,,,{{omit}},{{omit}},272;73
+52_Player_2,52,2,1,2,,"Say, “Dang! That looks really cool! I like the color!” ",Dang! That looks really cool! I like the color!,False,Block,Normal,,,,,{{omit}},{{omit}},31;120
+52_Player_3,52,3,1,2,,Say “Nice.” ,Nice.,False,Block,Normal,,,,,{{omit}},{{omit}},212;119
+52_Player_4,52,4,1,2,,"Say, “No big deal. It’s not that hard.” ",No big deal. It’s not that hard.,False,Block,Normal,,,,,{{omit}},{{omit}},389;119
+52_Player_5,52,5,1,2,OnTimeout,Shrug and keep working. ,,False,Block,Normal,,,,,{{omit}},{{omit}},568;120
+53_Teacher_0,53,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+53_Teacher_1,53,1,12,1,,,...And that’s the end of the challenge! Clean up your tables so you can go to Art Club next.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+54_Aiden_0,54,0,2,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},299;14
+54_Aiden_1,54,1,2,1,,,"Hey, that’s my favorite water bottle! Why did you throw it away? Now it’s dirty!",False,Block,Normal,,,,,{{omit}},{{omit}},301;68
+54_Player_2,54,2,1,2,OnTimeout,Shrug and continue.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+54_Player_3,54,3,1,2,,Say “Oops! I’m sorry! I didn’t know it was yours.”,Oops! I’m sorry! I didn’t know it was yours.,False,Block,Normal,,,,,{{omit}},{{omit}},210;118
+54_Player_4,54,4,1,2,,Say “It’s your fault. You shouldn’t have left it on the table!”,It’s your fault. You shouldn’t have left it on the table!,False,Block,Normal,,,,,{{omit}},{{omit}},389;117
+54_Player_5,54,5,1,2,,"Say “Sorry, I’ll clean it for you.”","Sorry, I’ll clean it for you.",False,Block,Normal,,,,,{{omit}},{{omit}},568;117
+54_Aiden_6,54,6,2,1,,,That’s alright.,False,Block,Normal,,,,,{{omit}},{{omit}},210;168
+55_Luis_0,55,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},219;21
+55_Luis_1,55,1,4,1,,,Hmm…someone forgot to clean up…,False,Block,Normal,,,,,{{omit}},{{omit}},218;71
+55_Player_2,55,2,1,4,OnTimeout,Ignore the trash.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;118
+55_Player_3,55,3,1,4,,Pick up the trash and throw it away.,,False,Block,Normal,,,,,{{omit}},{{omit}},115;175
+55_Player_4,55,4,1,4,,Tell the teacher that someone didn’t clean up.,,False,Block,Normal,,,,,{{omit}},{{omit}},238;123
+55_Player_5,55,5,1,4,,"Say, “Eww. People are gross!” ",Eww. People are gross!,False,Block,Normal,,,,,{{omit}},{{omit}},338;174
+55_Player_6,55,6,1,4,,Push it on the floor and kick it around.,,False,Block,Normal,,,,,{{omit}},{{omit}},444;122
+56_Teacher_0,56,0,12,12,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+56_Player_1,56,1,1,12,,,Someone left their trash on the table.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+56_Teacher_2,56,2,12,1,,,Thanks for letting me know.,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+57_Teacher_0,57,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+57_Teacher_1,57,1,12,1,,,Head over to Art Club.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+58_Teacher_0,58,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+58_Teacher_1,58,1,12,1,,,Hurry over to Art Club. You don’t want to miss out!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+59_Teacher_0,59,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+59_Teacher_1,59,1,12,1,,,Good. You made it!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+60_Kayla_0,60,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+60_Kayla_1,60,1,10,1,,,Oh no!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+61_Kayla_0,61,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+61_Player_1,61,1,1,10,,Alert the teacher.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+61_Player_2,61,2,1,10,,Help pick up the items.,,False,Block,Normal,,,,,{{omit}},{{omit}},97;131
+61_Player_3,61,3,1,10,,Laugh quietly.,,False,Block,Normal,,,,,{{omit}},{{omit}},236;70
+61_Player_4,61,4,1,10,OnTimeout,Just watch.,,False,Block,Normal,,,,,{{omit}},{{omit}},359;130
+62_Teacher_0,62,0,12,12,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+62_Player_1,62,1,1,12,,,Kayla needs help.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+63_Kayla_0,63,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+63_Kayla_1,63,1,10,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+64_Teacher_0,64,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+64_Teacher_1,64,1,12,1,,,Today in Art Club we’re going to make pixel art. Use the gem containers on your table to choose a color. Click a square on the grid to color it. You should choose one or more partners to make things go faster.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+65_Luis_0,65,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;19
+65_Luis_1,65,1,4,1,,,"Hey, want to work together?",False,Block,Normal,,,,,{{omit}},{{omit}},30;69
+65_Player_2,65,2,1,4,,,Okay. ,False,Block,Normal,,,,,{{omit}},{{omit}},30;119
+66_Kayla_0,66,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},217;15
+66_Kayla_1,66,1,10,1,,,I guess I’ll just work alone then…,False,Block,Normal,,,,,{{omit}},{{omit}},213;67
+66_Player_2,66,2,1,10,OnTimeout,Ignore Kayla and start working with Luis. ,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+66_Player_3,66,3,1,10,,"Say, “You can join us.”",You can join us!,False,Block,Normal,,,,,{{omit}},{{omit}},213;121
+66_Kayla_4,66,4,10,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},213;171
+66_Player_5,66,5,1,10,,Say “I already have a partner. Can you find someone else?” ,I already have a partner. Can you find someone else?,False,Block,Normal,,,,,{{omit}},{{omit}},607;101
+66_Kayla_6,66,6,10,1,,,Okay. ,False,Block,Normal,,,,,{{omit}},{{omit}},601;166
+66_Player_7,66,7,1,10,,"Say, “You can ask the teacher who needs a partner.”",You can ask the teacher who needs a partner.,False,Block,Normal,,,,,{{omit}},{{omit}},404;114
+66_Kayla_8,66,8,10,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},404;164
+67_Zoe_0,67,0,14,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},167;19
+67_Zoe_1,67,1,14,1,,Aiden! You messed up my project!!!,,False,Block,Normal,,,,,{{omit}},{{omit}},166;67
+67_Player_2,67,2,1,14,,Stay quiet and look away.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+67_Player_3,67,3,1,14,,Quietly laugh.  ,,False,Block,Normal,,,,,{{omit}},{{omit}},126;167
+67_Player_4,67,4,1,14,,"Say “Hey, it wasn’t Aiden. It fell down by itself.”","Hey, it wasn’t Aiden. It fell down by itself.",False,Block,Normal,,,,,{{omit}},{{omit}},239;114
+67_Player_5,67,5,1,14,,"Say, “It was an accident.” ",It was an accident.,False,Block,Normal,,,,,{{omit}},{{omit}},355;164
+67_Aiden_6,67,6,2,14,,,Yeah.,False,Block,Normal,,,,,{{omit}},{{omit}},237;239
+67_Aiden_7,67,7,2,14,,,Yeah.,False,Block,Normal,,,,,{{omit}},{{omit}},417;238
+68_Leo_0,68,0,9,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},187;13
+68_Leo_1,68,1,9,1,,,"Hmph…everyone else got blue gems. That’s my favorite color, but I’m the only one who doesn’t have any.",False,Block,Normal,,,,,{{omit}},{{omit}},186;63
+68_Player_2,68,2,1,9,,"Say, “Here, you can have my blue gem container.”","Here, you can have my blue gem container.",False,Block,Normal,,,,,{{omit}},{{omit}},34;122
+68_Player_3,68,3,1,9,,"Say, “You can have some of my blue gems when I’m done.”",You can have some of my blue gems when I’m done.,False,Block,Normal,,,,,{{omit}},{{omit}},121;175
+68_Player_4,68,4,1,9,OnTimeout,Keep working on your own pixel art.,,False,Block,Normal,,,,,{{omit}},{{omit}},237;121
+68_Player_5,68,5,1,9,,"Say, “I’m not sharing! It’s not my fault you don’t have one.”",I’m not sharing! It’s not my fault you don’t have one.,False,Block,Normal,,,,,{{omit}},{{omit}},370;174
+68_Leo_6,68,6,9,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},28;246
+68_Leo_7,68,7,9,1,,,Thanks.,False,Block,Normal,,,,,{{omit}},{{omit}},225;237
+69_Leo_0,69,0,9,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+69_Leo_1,69,1,9,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+70_Luis_0,70,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+70_Luis_1,70,1,4,1,,,I wish I was back at my old school. The only reason I had to move here was because I got held back a grade and my mom said this school was better…Don’t tell anyone!,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+71_Emma_0,71,0,11,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},254;21
+71_Emma_1,71,1,11,1,,,What did that new kid say?,False,Block,Normal,,,,,{{omit}},{{omit}},251;67
+71_Player_2,71,2,1,11,OnTimeout,Shrug and continue your work.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+71_Player_4,71,4,1,11,,"Say, “Oh nothing. Show me your art.”",Oh nothing. Show me your art.,False,Block,Normal,,,,,{{omit}},{{omit}},248;116
+71_Player_5,71,5,1,11,,Say “They got held back so they’re doing our grade again.” ,They got held back so they’re doing our grade again.,False,Block,Normal,,,,,{{omit}},{{omit}},337;169
+71_Player_6,71,6,1,11,,"Say, “I’m sorry I can’t tell you because they said it was a secret.”",I’m sorry I can’t tell you because they said it was a secret.,False,Block,Normal,,,,,{{omit}},{{omit}},433;117
+72_Teacher_0,72,0,12,5,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+72_Teacher_1,72,1,12,5,,,"Jason and Sofia, can I see you both for a minute?",False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+73_Sofia_0,73,0,5,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},224;19
+73_Sofia_1,73,1,5,1,,,"Ugh, I bet the teacher wants to talk to me about my history quiz. I only got 2 right! I’m so embarrassed!",False,Block,Normal,,,,,{{omit}},{{omit}},228;71
+73_Player_2,73,2,1,5,,"Reply to Sofia, “Don’t worry, I won’t tell anyone.”","Don’t worry, I won’t tell anyone.",False,Block,Normal,,,,,{{omit}},{{omit}},31;119
+73_Player_3,73,3,1,5,,"Reply to Sofia, “Wow, you did really bad!”","Wow, you did really bad!",False,Block,Normal,,,,,{{omit}},{{omit}},105;186
+73_Player_4,73,4,1,5,OnTimeout,"Reply to Sofia, “Oh no! I'm sorry” ",Oh no! I'm sorry.,False,Block,Normal,,,,,{{omit}},{{omit}},224;121
+73_Player_5,73,5,1,14,,"Quietly say to the kid beside you, “Can you believe Sofia did so bad on such an easy quiz?”",Can you believe Sofia did so bad on such an easy quiz?,False,Block,Normal,,,,,{{omit}},{{omit}},326;186
+73_Player_6,73,6,1,14,,"Quietly say to the kid beside you, “What grade did you get on the quiz?”",What grade did you get on the quiz?,False,Block,Normal,,,,,{{omit}},{{omit}},423;128
+73_Sofia_7,73,7,5,1,,,"Yeah, I know.",False,Block,Normal,,,,,{{omit}},{{omit}},105;236
+73_Zoe_8,73,8,14,1,,,Wow. ,False,Block,Normal,,,,,{{omit}},{{omit}},326;236
+73_Zoe_9,73,9,14,1,,,I missed two. ,False,Block,Normal,,,,,{{omit}},{{omit}},513;176
+74_Zoe_0,74,0,14,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},189;54
+74_Zoe_1,74,1,14,1,,,"Speaking of the history quiz, I heard that Min used her phone to cheat. There’s no way she got a 30 on her own.",False,Block,Normal,,,,,{{omit}},{{omit}},189;125
+74_Player_2,74,2,1,14,,Change the conversation topic.,"Hey, can I see your art project?",False,Block,Normal,,,,,{{omit}},{{omit}},17;213
+74_Player_3,74,3,1,14,,"Tell Emma, Luis, and Jason about the rumor.","Hey, did you guys hear that Min cheated on her history quiz?",False,Block,Normal,,,,,{{omit}},{{omit}},33.32585;381.9478
+74_Player_6,74,6,1,14,,Say “I don’t think you would like it if someone said that about you.”,I don’t think you would like it if someone said that about you.,False,Block,Normal,,,,,{{omit}},{{omit}},366.3478;170.7392
+74_Player_7,74,7,1,14,,"Don’t say anything, but tell Zoe, “Stop! The gossiping is getting old” later.",,False,Block,Normal,,,,,{{omit}},{{omit}},171.4782;333.6087
+74_Player_8,74,8,1,14,OnTimeout,"Say, “How would you know? Sounds made up.”",How would you know? Sounds made up.,False,Block,Normal,,,,,{{omit}},{{omit}},407.087;324.6522
+74_Zoe_9,74,9,14,1,,,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},442;247.6956
+75_Teacher_0,75,0,12,6,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+75_Teacher_1,75,1,12,6,,,Jason you are falling way behind on your homework. You need to get to work on catching up.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+75_Jason_2,75,2,6,12,,,"Okay, I’ll try to do better.",False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+76_Jason_0,76,0,6,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},230;19
+76_Player_1,76,1,1,6,OnTimeout,Look away and work on your project.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+76_Player_2,76,2,1,6,,"Say, “Let’s work together and help each other.”",Let’s work together and help each other.,False,Block,Normal,,,,,{{omit}},{{omit}},126;121
+76_Player_3,76,3,1,6,,"Say, “You’re kinda dumb.” ",You’re kinda dumb.,False,Block,Normal,,,,,{{omit}},{{omit}},225;67
+76_Player_4,76,4,1,6,,"Say, “Do you need me to help you?”",Do you need me to help you?,False,Block,Normal,,,,,{{omit}},{{omit}},326;119
+76_Player_5,76,5,1,14,,Whisper to your friend Zoe next to you “What’s wrong with Jason?”,What’s wrong with Jason?,False,Block,Normal,,,,,{{omit}},{{omit}},425;68
+76_Jason_6,76,6,6,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},126;171
+76_Jason_7,76,7,6,1,,,"Maybe later, thanks!",False,Block,Normal,,,,,{{omit}},{{omit}},326;169
+77_Teacher_0,77,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+77_Teacher_1,77,1,12,1,,,"You have 10 more seconds to finish your art project, so start wrapping things up!",False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+78_Teacher_0,78,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+78_Teacher_1,78,1,12,1,,,Alright! It’s basketball time. Head to the gym when you get finished.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+79_Teacher_0,79,0,12,1,START,,,False,,Normal,,,None(),,{{omit}},{{omit}},30;20
+79_Teacher_1,79,1,12,1,,,"Basketball Club is starting soon, you’d better get to the gym!",False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+80_Luis_0,80,0,4,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},175;10
+80_Luis_1,80,1,4,1,,,"I don’t want to be late for basketball, but I have to go to the bathroom and I don’t know where it is!",False,Block,Normal,,,,,{{omit}},{{omit}},176;58
+80_Player_2,80,2,1,4,OnTimeout,Pretend you did not hear.  Keep walking to gym.,,False,Block,Normal,,,,,{{omit}},{{omit}},30;119
+80_Player_4,80,4,1,4,,"Say “Don’t worry, I can show you. Follow me.”","Don’t worry, I can show you. Follow me.",False,Block,Normal,,,,,{{omit}},{{omit}},109;176
+80_Player_5,80,5,1,4,,Say “It’s just through those doors. You still have time.” ,It’s just through those doors. You still have time.,False,Block,Normal,,,,,{{omit}},{{omit}},238;121
+80_Player_6,80,6,1,4,,Say “Not my problem. I don’t want to be late either.” ,Not my problem. I don’t want to be late either.,False,Block,Normal,,,,,{{omit}},{{omit}},433;119
+80_Luis_7,80,7,4,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},107;227
+80_Luis_8,80,8,4,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},305;172
+81_Teacher_0,81,0,12,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+81_Teacher_1,81,1,12,1,,,Head to the Gym.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+82_Coach_0,82,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+82_Coach_1,82,1,13,1,,,You’d better get in line if you don’t want to miss the bus.,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+83_Min_0,83,0,3,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},223;15
+83_Min_1,83,1,3,1,,,Let’s not let Sofia play basketball tomorrow. She's not very good. ,False,Block,Normal,,,,,{{omit}},{{omit}},222.9011;63
+83_Player_2,83,2,1,3,,"Say “No. Why would we do that?""",No. Why would we do that? ,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+83_Player_3,83,3,1,3,,Say “That’s not nice!”  ,That’s not nice!,False,Block,Normal,,,,,{{omit}},{{omit}},143;170
+83_Player_4,83,4,1,3,,Stay quiet and wait to see what happens. ,,False,Block,Normal,,,,,{{omit}},{{omit}},228;117
+83_Player_6,83,6,1,3,,Say “Okay” and turn your back on Sofia.,Okay.,False,Block,Normal,,,,,{{omit}},{{omit}},429;115
+83_Min_7,83,7,3,1,,,Hmmph- Fine then. ,False,Block,Normal,,,,,{{omit}},{{omit}},31.13637;240.4546
+83_Min_8,83,8,3,1,,,Okay. ,False,Block,Normal,,,,,{{omit}},{{omit}},222.5454;238.1818
+84_Jason_0,84,0,6,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},182;16
+84_Player_1,84,1,1,6,,"Say, “Do you need help?”",Do you need help?,False,Block,Normal,,,,,{{omit}},{{omit}},30;70
+84_Player_3,84,3,1,6,,Stay quiet and look away.,,False,Block,Normal,,,,,{{omit}},{{omit}},176.1304;115.2174
+84_Player_4,84,4,1,6,,"Say, ""Hurry up!""",Hurry up!,False,Block,Normal,,,,,{{omit}},{{omit}},366;120
+84_Jason_6,84,6,6,1,,,Sure. Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},33;189
+84_Player_7,84,7,1,6,,"Say, ""Let's do it together"" and help. ",Let's do it together.,False,Block,Normal,,,,,{{omit}},{{omit}},568;91
+85_Kayla_0,85,0,10,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},226;19
+85_Kayla_1,85,1,10,1,,,Ah man- where am I going to sit?,False,Block,Normal,,,,,{{omit}},{{omit}},216;67
+85_Player_2,85,2,1,10,,"Say, “You can sit by me.”",You can sit by me.,False,Block,Normal,,,,,{{omit}},{{omit}},30;120
+85_Player_3,85,3,1,10,,"Move over to make room for Kayla, but don't say anything.",,False,Block,Normal,,,,,{{omit}},{{omit}},121;175
+85_Player_4,85,4,1,10,,Avoid looking at Kayla so she doesn’t try to sit by you. ,,False,Block,Normal,,,,,{{omit}},{{omit}},261;123
+85_Player_5,85,5,1,10,,Put your backpack next to your seat.,,False,Block,Normal,,,,,{{omit}},{{omit}},449;123
+85_Kayla_7,85,7,10,1,,,Thanks!,False,Block,Normal,,,,,{{omit}},{{omit}},23;298
+85_Kayla_8,85,8,10,1,,,Thanks. ,False,Block,Normal,,,,,{{omit}},{{omit}},222;246
+86_Coach_0,86,0,13,1,START,,,False,Block,Normal,,,None(),,{{omit}},{{omit}},30;20
+86_Coach_1,86,1,13,1,,,See you all tomorrow!,False,Block,Normal,,,,,{{omit}},{{omit}},29;70
+OutgoingLinks
+OriginConvID,OriginID,DestConvID,DestID,ConditionPriority
+Number,Number,Number,Number,Special
+1,0,1,10,Normal
+1,1,1,9,Normal
+1,10,1,1,Normal
+1,10,1,2,Normal
+1,10,1,3,Normal
+1,10,1,4,Normal
+2,0,2,1,Normal
+3,0,3,1,Normal
+3,1,3,2,Normal
+3,1,3,3,Normal
+3,1,3,4,Normal
+3,1,3,5,Normal
+3,1,3,6,Normal
+3,3,3,7,Normal
+3,4,3,8,Normal
+3,5,3,9,Normal
+4,0,4,1,Normal
+5,0,5,1,Normal
+6,0,6,1,Normal
+7,0,7,1,Normal
+7,1,7,2,Normal
+7,1,7,3,Normal
+7,1,7,4,Normal
+7,1,7,5,Normal
+7,4,7,6,Normal
+8,0,8,1,Normal
+9,0,9,1,Normal
+9,1,9,2,Normal
+9,1,9,3,Normal
+9,1,9,4,Normal
+9,1,9,5,Normal
+9,3,9,6,Normal
+9,4,9,7,Normal
+9,5,9,8,Normal
+10,0,10,1,Normal
+10,1,10,2,Normal
+10,1,10,3,Normal
+10,1,10,4,Normal
+10,1,10,5,Normal
+10,2,10,6,Normal
+10,5,10,7,Normal
+11,0,11,1,Normal
+12,0,12,1,Normal
+12,1,12,2,Normal
+12,2,12,3,Normal
+13,0,13,2,Normal
+13,0,13,3,Normal
+13,0,13,4,Normal
+13,0,13,5,Normal
+13,0,13,6,Normal
+14,0,14,1,Normal
+14,1,14,3,Normal
+14,1,14,4,Normal
+14,1,14,5,Normal
+14,1,14,6,Normal
+14,3,14,8,Normal
+14,4,14,9,Normal
+15,0,15,1,Normal
+15,1,15,2,Normal
+15,1,15,3,Normal
+15,1,15,4,Normal
+15,1,15,5,Normal
+15,2,15,7,Normal
+15,3,15,6,Normal
+16,0,16,1,Normal
+16,1,16,2,Normal
+16,1,16,3,Normal
+16,1,16,4,Normal
+16,1,16,5,Normal
+16,3,16,7,Normal
+16,5,16,6,Normal
+17,0,17,1,Normal
+18,0,18,1,Normal
+18,1,18,2,Normal
+18,1,18,3,Normal
+18,1,18,4,Normal
+18,1,18,5,Normal
+18,4,18,6,Normal
+18,6,18,7,Normal
+19,0,19,1,Normal
+19,0,19,2,Normal
+19,0,19,3,Normal
+19,0,19,4,Normal
+20,0,20,1,Normal
+20,0,20,2,Normal
+20,0,20,3,Normal
+20,0,20,4,Normal
+20,4,20,5,Normal
+21,0,21,1,Normal
+22,0,22,1,Normal
+22,0,22,2,Normal
+22,0,22,3,Normal
+22,0,22,4,Normal
+22,2,22,5,Normal
+22,3,22,6,Normal
+22,4,22,7,Normal
+23,0,23,1,Normal
+24,0,24,1,Normal
+24,1,24,2,Normal
+24,1,24,3,Normal
+24,1,24,4,Normal
+24,1,24,5,Normal
+24,1,24,7,Normal
+24,5,24,8,Normal
+25,0,25,1,Normal
+25,1,25,2,Normal
+25,1,25,3,Normal
+25,1,25,4,Normal
+25,1,25,5,Normal
+27,0,27,1,Normal
+27,1,27,2,Normal
+27,1,27,3,Normal
+27,1,27,4,Normal
+27,1,27,6,Normal
+27,4,27,7,Normal
+27,6,27,10,Normal
+27,7,27,8,Normal
+28,0,28,1,Normal
+28,1,28,2,Normal
+28,1,28,3,Normal
+28,1,28,4,Normal
+28,1,28,5,Normal
+28,1,28,6,Normal
+28,3,28,7,Normal
+29,0,29,1,Normal
+30,0,30,1,Normal
+30,1,30,2,Normal
+30,1,30,3,Normal
+30,1,30,4,Normal
+30,1,30,5,Normal
+30,3,30,6,Normal
+30,4,30,7,Normal
+31,0,31,1,Normal
+32,0,32,1,Normal
+33,0,33,1,Normal
+34,0,34,1,Normal
+34,1,34,2,Normal
+35,0,35,1,Normal
+35,0,35,2,Normal
+35,0,35,3,Normal
+35,0,35,4,Normal
+35,0,35,5,Normal
+36,0,36,1,Normal
+37,0,37,1,Normal
+38,0,38,1,Normal
+39,0,39,1,Normal
+40,0,40,1,Normal
+41,0,41,1,Normal
+41,1,41,2,Normal
+41,1,41,3,Normal
+41,1,41,4,Normal
+41,1,41,5,Normal
+41,2,41,6,Normal
+41,3,41,7,Normal
+41,5,41,8,Normal
+42,0,42,1,Normal
+42,1,42,2,Normal
+42,2,42,4,Normal
+42,2,42,5,Normal
+42,2,42,6,Normal
+42,2,42,8,Normal
+43,0,43,1,Normal
+44,0,44,1,Normal
+44,1,44,2,Normal
+44,1,44,3,Normal
+44,1,44,4,Normal
+44,1,44,5,Normal
+44,4,44,6,Normal
+45,0,45,1,Normal
+46,0,46,1,Normal
+46,1,46,2,Normal
+46,1,46,3,Normal
+46,1,46,4,Normal
+46,1,46,5,Normal
+46,4,46,6,Normal
+47,0,47,1,Normal
+47,1,47,2,Normal
+48,0,48,1,Normal
+48,1,48,2,Normal
+48,2,48,3,Normal
+48,3,48,4,Normal
+48,3,48,6,Normal
+48,3,48,7,Normal
+48,3,48,8,Normal
+48,6,48,13,Normal
+48,6,48,14,Normal
+48,7,48,9,Normal
+48,7,48,10,Normal
+50,0,50,1,Normal
+50,1,50,2,Normal
+50,1,50,3,Normal
+50,1,50,4,Normal
+50,1,50,5,Normal
+50,1,50,6,Normal
+50,3,50,7,Normal
+51,0,51,1,Normal
+51,1,51,2,Normal
+51,1,51,3,Normal
+51,1,51,4,Normal
+51,1,51,5,Normal
+51,5,51,6,Normal
+52,0,52,1,Normal
+52,1,52,2,Normal
+52,1,52,3,Normal
+52,1,52,4,Normal
+52,1,52,5,Normal
+53,0,53,1,Normal
+54,0,54,1,Normal
+54,1,54,2,Normal
+54,1,54,3,Normal
+54,1,54,4,Normal
+54,1,54,5,Normal
+54,3,54,6,Normal
+55,0,55,1,Normal
+55,1,55,2,Normal
+55,1,55,3,Normal
+55,1,55,4,Normal
+55,1,55,5,Normal
+55,1,55,6,Normal
+56,0,56,1,Normal
+56,1,56,2,Normal
+57,0,57,1,Normal
+58,0,58,1,Normal
+59,0,59,1,Normal
+60,0,60,1,Normal
+61,0,61,1,Normal
+61,0,61,2,Normal
+61,0,61,3,Normal
+61,0,61,4,Normal
+62,0,62,1,Normal
+63,0,63,1,Normal
+64,0,64,1,Normal
+65,0,65,1,Normal
+65,1,65,2,Normal
+66,0,66,1,Normal
+66,1,66,2,Normal
+66,1,66,3,Normal
+66,1,66,7,Normal
+66,1,66,5,Normal
+66,3,66,4,Normal
+66,5,66,6,Normal
+66,7,66,8,Normal
+67,0,67,1,Normal
+67,1,67,2,Normal
+67,1,67,3,Normal
+67,1,67,4,Normal
+67,1,67,5,Normal
+67,4,67,6,Normal
+67,5,67,7,Normal
+68,0,68,1,Normal
+68,1,68,2,Normal
+68,1,68,3,Normal
+68,1,68,4,Normal
+68,1,68,5,Normal
+68,2,68,6,Normal
+68,3,68,7,Normal
+69,0,69,1,Normal
+70,0,70,1,Normal
+71,0,71,1,Normal
+71,1,71,2,Normal
+71,1,71,4,Normal
+71,1,71,5,Normal
+71,1,71,6,Normal
+72,0,72,1,Normal
+73,0,73,1,Normal
+73,1,73,2,Normal
+73,1,73,3,Normal
+73,1,73,4,Normal
+73,1,73,5,Normal
+73,1,73,6,Normal
+73,3,73,7,Normal
+73,5,73,8,Normal
+73,6,73,9,Normal
+74,0,74,1,Normal
+74,1,74,2,Normal
+74,1,74,3,Normal
+74,1,74,6,Normal
+74,1,74,7,Normal
+74,1,74,8,Normal
+74,6,74,9,Normal
+75,0,75,1,Normal
+75,1,75,2,Normal
+76,0,76,1,Normal
+76,0,76,2,Normal
+76,0,76,3,Normal
+76,0,76,4,Normal
+76,0,76,5,Normal
+76,2,76,6,Normal
+76,4,76,7,Normal
+77,0,77,1,Normal
+78,0,78,1,Normal
+79,0,79,1,Normal
+80,0,80,1,Normal
+80,1,80,2,Normal
+80,1,80,4,Normal
+80,1,80,5,Normal
+80,1,80,6,Normal
+80,4,80,7,Normal
+80,5,80,8,Normal
+81,0,81,1,Normal
+82,0,82,1,Normal
+83,0,83,1,Normal
+83,1,83,2,Normal
+83,1,83,3,Normal
+83,1,83,4,Normal
+83,1,83,6,Normal
+83,2,83,7,Normal
+83,3,83,8,Normal
+84,0,84,1,Normal
+84,0,84,3,Normal
+84,0,84,4,Normal
+84,0,84,7,Normal
+84,1,84,6,Normal
+85,0,85,1,Normal
+85,1,85,2,Normal
+85,1,85,3,Normal
+85,1,85,4,Normal
+85,1,85,5,Normal
+85,2,85,7,Normal
+85,3,85,8,Normal
+86,0,86,1,Normal
