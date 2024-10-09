@@ -9,12 +9,12 @@ from config import CONFIG
 """
 The script performs the following main tasks:
 
-Parse the CSV file containing dialogue entries and create Entry objects.
-Clean the dialogue text in each Entry.
-Load voice assignments from a JSON file (VoiceAssignments.json).
-Assign voice IDs to each Entry based on character names.
-Save the assigned entries to a JSON file (assigned_entries.json).
-Save any unknown entries (entries without a matching voice ID) to another JSON file (unknown_entries.json).
+-Parse the CSV file containing dialogue entries and create Entry objects for each line. (either "dialogue.csv" or "2024-10-09 - vSchool Dialogue Export.csv")
+-Clean the dialogue text in each Entry, ensuring we keep the raw text and cleaned text.
+-Load in voice assignments from a JSON file (VoiceAssignments.json).
+-Assign voice IDs to each Entry based on character names.
+-Save the assigned entries to a JSON file (assigned_entries.json).
+-Save any unknown entries (entries without a matching voice ID) to another JSON file (unknown_entries.json).
 
 The script uses a configuration file (config.py) to store settings such as column names, text cleaning rules, and other parameters.
 """
