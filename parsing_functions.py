@@ -177,7 +177,7 @@ def main():
     # Step 3: Load voice assignments
     voice_assignments = load_voice_assignments(voice_assignments_file)
 
-    # Step 4: Assign voice IDs to entries, handling multiple voice IDs per character
+    # Step 4: Assign voice IDs to entries, including handling for multiple voice IDs per character
     assigned_entries, unknown_entries = assign_voice_ids(entries, voice_assignments)
 
     # Step 5: Save assigned entries to JSON
