@@ -6,6 +6,19 @@ from Entry import Entry
 from datetime import datetime
 from config import CONFIG
 
+"""
+The script performs the following main tasks:
+
+Parse the CSV file containing dialogue entries and create Entry objects.
+Clean the dialogue text in each Entry.
+Load voice assignments from a JSON file (VoiceAssignments.json).
+Assign voice IDs to each Entry based on character names.
+Save the assigned entries to a JSON file (assigned_entries.json).
+Save any unknown entries (entries without a matching voice ID) to another JSON file (unknown_entries.json).
+
+The script uses a configuration file (config.py) to store settings such as column names, text cleaning rules, and other parameters.
+"""
+
 # Get the current date in YYYYMMDD format
 current_date = datetime.now().strftime('%Y%m%d')
 

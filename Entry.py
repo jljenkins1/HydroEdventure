@@ -4,7 +4,7 @@ class Entry:
         self.voiceID = voiceID
         self.voiceName = voiceName
         self.rawText = rawText
-        self.cleanText = None  # Will be set after cleaning
+        self.cleanText = None  # to be set after cleaning
         self.characterName = self.getName()
     
     def getTag(self):
