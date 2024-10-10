@@ -1,6 +1,7 @@
 import csv
 import re
 import json
+from Entry import Entry
 from datetime import datetime
 
 # List of items to remove from entries.
@@ -126,16 +127,14 @@ def clean_dialogue_text(dialogueText):
 
 def parse_dialogue_csv(csv_file, voices_file):
     """
-    Takes in a csv file containing a DialogueEntries table, and the VoiceAssignments.json file, and returns a list of entries.
-    Args: csv_file (dialogue.csv), and voices_file (VoiceAssignments.json)
-    Returns a list of entries, each one having an entrytag, dialogue_text, character ID, character name, voice ID, and voice name
+    Parses the dialogue CSV and associates each entry with the correct voice.
+    Returns a list of entries, each containing both original and cleaned dialogue text.
     """
     # Read voice assignments
     voice_data = read_voices(voices_file)
     
-    entries_original = []
-    entries_cleaned = []
-
+    entries = []
+    
     with open(csv_file, 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
         
@@ -144,79 +143,87 @@ def parse_dialogue_csv(csv_file, voices_file):
             if row and row[0] == 'DialogueEntries':
                 break
         
-        # Skip the next two header rows, as those are the column names
-        next(reader, None)
+        # Read the next header row to get column names
+        headers = next(reader, None)
+        if headers is None:
+            print("Error: Could not find header row after 'DialogueEntries' section.")
+            return []
+        
+        # Strip whitespace from headers
+        headers = [header.strip() for header in headers]
+        
+        # Create a mapping from header names to indices
+        header_indices = {header: index for index, header in enumerate(headers)}
+        
+        # Get the indices for 'entrytag' and 'DialogueText'
+        entrytag_index = header_indices.get('entrytag')
+        dialogue_text_index = header_indices.get('DialogueText')
+        
+        if entrytag_index is None or dialogue_text_index is None:
+            print("Error: Required columns 'entrytag' or 'DialogueText' not found in CSV headers.")
+            print(f"Available headers: {headers}")
+            return []
+        
+        # Remove or comment out the extra row skip if not necessary
         next(reader, None)
         
         # Iterate over the dialogue entries
         for row in reader:
             if not row or row[0] == 'OutgoingLinks':
                 break
-            entrytag = row[0]
-            if len(row) > 7:
-                dialogue_text = row[7]  # Adjust column index if needed
-            else:
-                print(f"Warning: Row has insufficient columns: {row}")
-                continue
-
+            entrytag = row[entrytag_index].strip()
+            dialogue_text = row[dialogue_text_index].strip() if len(row) > dialogue_text_index else ''
+    
             cleaned_text = clean_dialogue_text(dialogue_text)
-
-            # Skips entries with empty dialogue text
+    
+            # Skip entries with empty cleaned dialogue text
             if not cleaned_text.strip():
                 continue
-
+    
             # Extract character name from entrytag
             character_name = extract_character_name(entrytag)
-
+    
             # Get character data from voice_data
             character_info = voice_data.get(character_name)
-
+    
             if character_info:
                 if character_name == 'Player':
-                    #For 'Player', character_info is a list of voices
+                    # For 'Player', character_info is a list of voices
                     for char in character_info:
                         # Build the entry with all data
-                        entry = {
-                            'entrytag': entrytag,
-                            'dialogue_text': dialogue_text,  # Original text
-                            'character_id': char.get('ID'),
-                            'character_name': char.get('Name'),
-                            'voice_id': char.get('Voice ID'),
-                            'voice_name': char.get('Voice Name'),
-                        }
-                        entries_original.append(entry)
-                        entry_cleaned = entry.copy()
-                        entry_cleaned['dialogue_text'] = cleaned_text  # Cleaned text
-                        entries_cleaned.append(entry_cleaned)
+                        entry = Entry(
+                            entrytag=entrytag,
+                            voiceID=char.get('Voice ID'),
+                            voiceName=char.get('Voice Name'),
+                            rawText=dialogue_text
+                        )
+                        entry.setCleanText(cleaned_text)
+                        entries.append(entry)
                 else:
                     # Build the entry with all data
-                    entry = {
-                        'entrytag': entrytag,
-                        'dialogue_text': dialogue_text,  # Original text
-                        'character_id': character_info.get('ID'),
-                        'character_name': character_info.get('Name'),
-                        'voice_id': character_info.get('Voice ID'),
-                        'voice_name': character_info.get('Voice Name'),
-                    }
-                    entries_original.append(entry)
-                    entry_cleaned = entry.copy()
-                    entry_cleaned['dialogue_text'] = cleaned_text  # Cleaned text
-                    entries_cleaned.append(entry_cleaned)
+                    entry = Entry(
+                        entrytag=entrytag,
+                        voiceID=character_info.get('Voice ID'),
+                        voiceName=character_info.get('Voice Name'),
+                        rawText=dialogue_text
+                    )
+                    entry.setCleanText(cleaned_text)
+                    entries.append(entry)
             else:
                 # If character not found, print a warning
                 print(f"Warning: Character '{character_name}' not found in voice assignments.")
-
-    # Save the original entries to JSON with date in the filename
-    with open(f'dialogue_original_{current_date}.json', 'w', encoding='utf-8') as f:
-        json.dump(entries_original, f, indent=4)
-
-    # Save the cleaned entries to JSON with date in the filename
-    with open(f'dialogue_cleaned_{current_date}.json', 'w', encoding='utf-8') as f:
-        json.dump(entries_cleaned, f, indent=4)
-
-    print(f"Files created: dialogue_original_{current_date}.json, dialogue_cleaned_{current_date}.json")
     
-    return entries_cleaned  # Ensure this function returns a non-None value
+    # Convert entries to list of dictionaries
+    entries_data = [entry.to_dict() for entry in entries]
+    
+    # Save entries to JSON with date in the filename
+    with open(f'dialogue_entries_{current_date}.json', 'w', encoding='utf-8') as f:
+        json.dump(entries_data, f, ensure_ascii=False, indent=4)
+    
+    print(f"File created: dialogue_entries_{current_date}.json")
+    
+    return entries
+
 
 # TESTING
 csv_file = 'dialogue.csv'
@@ -226,12 +233,12 @@ entries = parse_dialogue_csv(csv_file, voices_file)
 # Check if entries were successfully created
 if entries:
     for entry in entries:
-        print(f"EntryTag: {entry['entrytag']}")
-        print(f"Character ID: {entry['character_id']}")
-        print(f"Character Name: {entry['character_name']}")
-        print(f"Voice ID: {entry['voice_id']}")
-        print(f"Voice Name: {entry['voice_name']}")
-        print(f"DialogueText: {entry['dialogue_text']}")
+        print(f"EntryTag: {entry.getTag()}")
+        print(f"Character Name: {entry.characterName}")
+        print(f"Voice ID: {entry.getVoiceID()}")
+        print(f"Voice Name: {entry.getVoiceName()}")
+        print(f"Raw Text: {entry.getRawText()}")
+        print(f"Cleaned Text: {entry.getCleanText()}")
         print('-' * 50)
 else:
     print("No entries were created. Check input files and parsing logic.")
