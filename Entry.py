@@ -1,3 +1,5 @@
+# Entry.py
+
 class Entry:
     def __init__(self, entrytag, voiceID=None, voiceName=None, rawText=''):
         self.entrytag = entrytag

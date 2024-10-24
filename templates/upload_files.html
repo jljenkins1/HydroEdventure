@@ -110,7 +110,7 @@
 
 <div class="container">
     <h2>Welcome to the Voice Converter Portal</h2>
-    <p class="welcome-message">Please upload your JSON files to generate AI voice conversions.</p>
+    <p class="welcome-message">Please upload your dialogue CSV and Voice Assignments JSON files.</p>
 
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -125,16 +125,16 @@
 
     <!-- File upload form -->
     <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data">
-        <label for="dialogue">Upload Dialogue JSON:</label>
+        <label for="dialogue">Upload Dialogue CSV:</label>
         <label class="custom-file-upload">
-            <input type="file" name="dialogue" id="dialogue" required onchange="updateFileName('dialogue', 'dialogue-file-name')">
+            <input type="file" name="dialogue" id="dialogue" accept=".csv" required onchange="updateFileName('dialogue', 'dialogue-file-name')">
             Choose File
         </label>
         <input type="text" id="dialogue-file-name" class="file-name-input" placeholder="Enter or choose file name" required>
 
-        <label for="voices">Upload Voice Assignment JSON:</label>
+        <label for="voices">Upload Voice Assignments JSON:</label>
         <label class="custom-file-upload">
-            <input type="file" name="voices" id="voices" required onchange="updateFileName('voices', 'voices-file-name')">
+            <input type="file" name="voices" id="voices" accept=".json" required onchange="updateFileName('voices', 'voices-file-name')">
             Choose File
         </label>
         <input type="text" id="voices-file-name" class="file-name-input" placeholder="Enter or choose file name" required>
@@ -144,12 +144,12 @@
 </div>
 
 <script>
-    // this updates file name when file is chosen
+    // Update file name when file is chosen
     function updateFileName(inputId, textInputId) {
         var fileInput = document.getElementById(inputId);
         var textInput = document.getElementById(textInputId);
         if (fileInput.files.length > 0) {
-            textInput.value = fileInput.files[0].name;  // updates the text field with the chosen file 
+            textInput.value = fileInput.files[0].name;  // Update the text field with the chosen file 
         }
     }
 </script>

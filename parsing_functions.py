@@ -126,10 +126,6 @@ def clean_dialogue_text(dialogueText):
     return dialogueText
 
 def parse_dialogue_csv(csv_file, voices_file):
-    """
-    Parses the dialogue CSV and associates each entry with the correct voice.
-    Returns a list of entries, each containing both original and cleaned dialogue text.
-    """
     # Read voice assignments
     voice_data = read_voices(voices_file)
     
@@ -173,19 +169,19 @@ def parse_dialogue_csv(csv_file, voices_file):
                 break
             entrytag = row[entrytag_index].strip()
             dialogue_text = row[dialogue_text_index].strip() if len(row) > dialogue_text_index else ''
-    
+
             cleaned_text = clean_dialogue_text(dialogue_text)
-    
+
             # Skip entries with empty cleaned dialogue text
             if not cleaned_text.strip():
                 continue
-    
+
             # Extract character name from entrytag
             character_name = extract_character_name(entrytag)
-    
+
             # Get character data from voice_data
             character_info = voice_data.get(character_name)
-    
+
             if character_info:
                 if character_name == 'Player':
                     # For 'Player', character_info is a list of voices
@@ -212,18 +208,9 @@ def parse_dialogue_csv(csv_file, voices_file):
             else:
                 # If character not found, print a warning
                 print(f"Warning: Character '{character_name}' not found in voice assignments.")
-    
-    # Convert entries to list of dictionaries
-    entries_data = [entry.to_dict() for entry in entries]
-    
-    # Save entries to JSON with date in the filename
-    with open(f'dialogue_entries_{current_date}.json', 'w', encoding='utf-8') as f:
-        json.dump(entries_data, f, ensure_ascii=False, indent=4)
-    
-    print(f"File created: dialogue_entries_{current_date}.json")
-    
-    return entries
 
+    return entries
+"""
 
 # TESTING
 csv_file = 'dialogue.csv'
@@ -242,3 +229,4 @@ if entries:
         print('-' * 50)
 else:
     print("No entries were created. Check input files and parsing logic.")
+"""
