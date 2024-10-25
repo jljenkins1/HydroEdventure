@@ -32,7 +32,16 @@ def index():
 @app.route('/verify_key', methods=['POST'])
 def verify_key():
     api_key = request.form.get('api_key')
-
+    
+    #Variables for JWT payload
+    payload_key = "api_key"
+    payload_value = api_key
+    payload = {payload_key: payload_value}
+    #Secret key for JWT encoding
+    secret_key = secrets.token_urlsafe(32)
+    # Create a JWT token 
+    token = jwt.encode(payload, secret_key)
+    
     # Test the API key by making a request to ElevenLabs API
     headers = {
         "xi-api-key": api_key
@@ -41,7 +50,9 @@ def verify_key():
 
     if response.status_code == 200:
         # Store the API key in the session
-        session['api_key'] = api_key
+        #session['api_key'] = api_key
+        # Store JWT Token in the session
+        session['token'] = token
         return redirect(url_for('upload_page'))  # Redirect to file upload page
     else:
         flash('Invalid API key. Please try again.', 'error')
@@ -82,10 +93,24 @@ def upload_files():
         entries = parse_dialogue_csv(dialogue_file_path, voices_file_path)
 
         # Get the API key from the session
-        api_key = session.get('api_key')
-        if not api_key:
+        #api_key = session.get('api_key')
+        #if not api_key:
+        #    flash('API key not found in session. Please re-enter your API key.', 'error')
+        #    return redirect(url_for('index'))
+
+        # Get the JWT token from the session
+        token = session.get('token')
+        if not token:
             flash('API key not found in session. Please re-enter your API key.', 'error')
             return redirect(url_for('index'))
+        # Decode the JWT token for api key
+        try:
+            decoded_payload = jwt.decode(token, options={"verify_signature": False})
+        except jwt.InvalidTokenError:
+            flash('Error in decoding JWT token. Please re-enter your API key.', 'error')
+            return redirect(url_for('index'))
+        # Get api key from decoded JWT token
+        api_key = list(decoded_payload.values())[0]
 
         # Create a temporary directory to save the audio files
         audio_output_folder = os.path.join(app.config['UPLOAD_FOLDER'], 'audio_files')
