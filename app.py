@@ -9,8 +9,8 @@ from werkzeug.utils import secure_filename
 from parsing_functions import parse_dialogue_csv
 from Entry import Entry
 from datetime import datetime
-import secrets
 import jwt
+import secrets
 
 # Set up the Flask application and define the upload directory.
 app = Flask(__name__)
@@ -26,6 +26,9 @@ Session(app)
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
+# Define a consistent secret key for JWT encoding/decoding
+JWT_SECRET_KEY = 'jwt_secret_key_here'  # Replace with a secure key
+
 # Define the route for the API key input
 @app.route('/')
 def index():
@@ -35,16 +38,11 @@ def index():
 @app.route('/verify_key', methods=['POST'])
 def verify_key():
     api_key = request.form.get('api_key')
-    
-    # Variables for JWT payload
-    payload_key = "api_key"
-    payload_value = api_key
-    payload = {payload_key: payload_value}
-    # Secret key for JWT encoding
-    secret_key = secrets.token_urlsafe(32)
-    # Create a JWT token 
-    token = jwt.encode(payload, secret_key, algorithm="HS256")
-    
+
+    # Create a JWT token with the API key
+    payload = {'api_key': api_key}
+    token = jwt.encode(payload, JWT_SECRET_KEY, algorithm="HS256")
+
     # Test the API key by making a request to ElevenLabs API
     headers = {
         "xi-api-key": api_key
@@ -101,28 +99,35 @@ def upload_files():
 
         # Decode the JWT token to get the API key
         try:
-            decoded_payload = jwt.decode(token, options={"verify_signature": False})
+            decoded_payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=["HS256"])
         except jwt.InvalidTokenError:
             flash('Error in decoding JWT token. Please re-enter your API key.', 'error')
             return redirect(url_for('index'))
-        
-        # Get API key from decoded JWT token
-        api_key = list(decoded_payload.values())[0]
 
-        # Date stamp for filenames
-        date_stamp = datetime.now().strftime("%Y%m%d")
+        # Get API key from decoded JWT token
+        api_key = decoded_payload.get('api_key')
+
+        # Date-time stamp for filenames
+        date_stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Base output directory
+        output_base_dir = os.path.join(app.config['UPLOAD_FOLDER'], f"voice_files_{date_stamp}")
 
         # Character-specific folders
-        player_folders = {f"Player{i}": os.path.join(app.config['UPLOAD_FOLDER'], f"Player{i}_{date_stamp}") for i in range(1, 6)}
-        player_folders["NPC"] = os.path.join(app.config['UPLOAD_FOLDER'], f"NPC_{date_stamp}")
+        player_folders = {}
+        npc_folder = os.path.join(output_base_dir, "NPC")
+        os.makedirs(npc_folder, exist_ok=True)
 
-        # Create folders if they don’t exist
-        for folder in player_folders.values():
-            if not os.path.exists(folder):
-                os.makedirs(folder)
+        # Get unique player voices from entries
+        player_voice_ids = set(entry.voiceID for entry in entries if entry.characterName == "Player")
+        for voice_id in player_voice_ids:
+            folder_name = f"Player_{voice_id}"
+            folder_path = os.path.join(output_base_dir, folder_name)
+            player_folders[voice_id] = folder_path
+            os.makedirs(folder_path, exist_ok=True)
 
-        # Generate audio files using ElevenLabs API, limit to 10 entries
-        for entry in entries[:10]:
+        # Generate audio files using ElevenLabs API
+        for entry in entries[:31]:
             text = entry.getCleanText()
             if not text:
                 continue  # Skip entries with no text
@@ -132,8 +137,10 @@ def upload_files():
                 continue  # Skip entries with no voice ID
 
             # Determine folder based on character type
-            folder_key = "NPC" if "NPC" in entry.getTag() else entry.getTag()
-            folder_path = player_folders.get(folder_key, player_folders["NPC"])
+            if entry.characterName == "Player":
+                folder_path = player_folders.get(voice_id)
+            else:
+                folder_path = npc_folder
 
             # Generate audio request
             url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
@@ -160,16 +167,18 @@ def upload_files():
                 with open(audio_file_path, 'wb') as f:
                     f.write(response.content)
             else:
-                print(f"Error generating audio for entry {entry.getTag()}: {response.status_code}, {response.text}")
+                # Log the error and continue
+                flash(f"Error generating audio for entry {entry.getTag()}: {response.status_code}", 'error')
 
         # Create a zip file of the audio files for download
-        zip_filename = f'audio_files_{date_stamp}.zip'
+        zip_filename = f'voice_files_{date_stamp}.zip'
         zip_file_path = os.path.join(app.config['UPLOAD_FOLDER'], zip_filename)
         with ZipFile(zip_file_path, 'w') as zipf:
-            for folder in player_folders.values():
-                for root, _, files in os.walk(folder):
-                    for file in files:
-                        zipf.write(os.path.join(root, file), arcname=os.path.join(os.path.basename(root), file))
+            for root, dirs, files in os.walk(output_base_dir):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    arcname = os.path.relpath(file_path, output_base_dir)
+                    zipf.write(file_path, arcname)
 
         # Provide the zip file for download
         return send_file(zip_file_path, as_attachment=True)

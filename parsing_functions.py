@@ -56,10 +56,10 @@ def read_voices(json_file):
     """
     with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     characters = data.get('Character', [])
     voice_data = {}
-    
+
     for char in characters:
         name = char.get('Name')
         if name == 'Player':
@@ -69,7 +69,7 @@ def read_voices(json_file):
             voice_data['Player'].append(char)
         else:
             voice_data[name] = char
-    
+
     return voice_data
 
 def extract_character_name(entrytag):
@@ -128,41 +128,41 @@ def clean_dialogue_text(dialogueText):
 def parse_dialogue_csv(csv_file, voices_file):
     # Read voice assignments
     voice_data = read_voices(voices_file)
-    
+
     entries = []
-    
+
     with open(csv_file, 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
-        
+
         # Skip to the 'DialogueEntries' section
         for row in reader:
             if row and row[0] == 'DialogueEntries':
                 break
-        
+
         # Read the next header row to get column names
         headers = next(reader, None)
         if headers is None:
             print("Error: Could not find header row after 'DialogueEntries' section.")
             return []
-        
+
         # Strip whitespace from headers
         headers = [header.strip() for header in headers]
-        
+
         # Create a mapping from header names to indices
         header_indices = {header: index for index, header in enumerate(headers)}
-        
+
         # Get the indices for 'entrytag' and 'DialogueText'
         entrytag_index = header_indices.get('entrytag')
         dialogue_text_index = header_indices.get('DialogueText')
-        
+
         if entrytag_index is None or dialogue_text_index is None:
             print("Error: Required columns 'entrytag' or 'DialogueText' not found in CSV headers.")
             print(f"Available headers: {headers}")
             return []
-        
+
         # Remove or comment out the extra row skip if not necessary
         next(reader, None)
-        
+
         # Iterate over the dialogue entries
         for row in reader:
             if not row or row[0] == 'OutgoingLinks':
