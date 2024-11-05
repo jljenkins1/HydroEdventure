@@ -2,144 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Files - Voice Converter Portal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .header {
-            background-color: #2c3e50;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header img {
-            height: 50px;
-        }
-        .header h1 {
-            color: white;
-            margin: 0;
-            font-size: 24px;
-            font-weight: 400;
-        }
-        .container {
-            max-width: 600px;
-            margin: 80px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #2c3e50;
-            font-weight: 400;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label {
-            margin: 15px 0 5px;
-            font-size: 16px;
-            color: #555;
-        }
-        input[type="file"] {
-            display: none;
-        }
-        .custom-file-upload {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-bottom: 10px;
-        }
-        .custom-file-upload:hover {
-            background-color: #2980b9;
-        }
-        .file-name-input {
-            margin: 10px 0;
-            padding: 12px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            width: 100%;
-            color: #333;
-        }
-        button {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #1a252f;
-        }
-        .welcome-message {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gradient-to-b from-white to-blue-300 text-gray-800 font-sans flex items-center justify-center min-h-screen">
 
-<!-- Header with logo -->
-<div class="header">
-    <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Mission Hydrosci Logo">
-    <h1>Mission Hydrosci</h1>
-</div>
+<div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg text-center mx-auto">
+    <!-- Header with logo -->
+    <div class="bg-gray-800 p-4 flex items-center justify-between rounded-t-lg mb-6">
+        <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Mission Hydrosci Logo" class="h-12">
+        <h1 class="text-white text-2xl font-light">Mission Hydrosci</h1>
+        <!-- Logout Link -->
+        <a href="{{ url_for('logout') }}" class="text-white bg-red-500 py-2 px-4 rounded hover:bg-red-600 transition duration-300">
+            Logout
+        </a>
+    </div>
 
-<div class="container">
-    <h2>Welcome to the Voice Converter Portal</h2>
-    <p class="welcome-message">Please upload your dialogue CSV and Voice Assignments JSON files.</p>
+    <h2 class="text-2xl font-light text-gray-800">Welcome to the Voice Converter Portal</h2>
+    <p class="text-lg text-gray-600 mt-4 mb-6">Please upload your dialogue CSV and Voice Assignments JSON files.</p>
 
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            <ul>
+            <ul class="list-none space-y-2">
                 {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
+                    <li class="text-red-600">{{ message }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
     {% endwith %}
 
     <!-- File upload form -->
-    <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data">
-        <label for="dialogue">Upload Dialogue CSV:</label>
-        <label class="custom-file-upload">
-            <input type="file" name="dialogue" id="dialogue" accept=".csv" required onchange="updateFileName('dialogue', 'dialogue-file-name')">
+    <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data" class="flex flex-col items-center space-y-4">
+        <label for="dialogue" class="text-gray-700 font-medium">Upload Dialogue CSV:</label>
+        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300">
+            <input type="file" name="dialogue" id="dialogue" accept=".csv" required onchange="updateFileName('dialogue', 'dialogue-file-name')" class="hidden">
             Choose File
         </label>
-        <input type="text" id="dialogue-file-name" class="file-name-input" placeholder="Enter or choose file name" required>
+        <input type="text" id="dialogue-file-name" placeholder="Enter or choose file name" required
+               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700">
 
-        <label for="voices">Upload Voice Assignments JSON:</label>
-        <label class="custom-file-upload">
-            <input type="file" name="voices" id="voices" accept=".json" required onchange="updateFileName('voices', 'voices-file-name')">
+        <label for="voices" class="text-gray-700 font-medium">Upload Voice Assignments JSON:</label>
+        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300">
+            <input type="file" name="voices" id="voices" accept=".json" required onchange="updateFileName('voices', 'voices-file-name')" class="hidden">
             Choose File
         </label>
-        <input type="text" id="voices-file-name" class="file-name-input" placeholder="Enter or choose file name" required>
+        <input type="text" id="voices-file-name" placeholder="Enter or choose file name" required
+               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700">
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-900 transition duration-300">Submit</button>
     </form>
 </div>
 
@@ -149,7 +62,7 @@
         var fileInput = document.getElementById(inputId);
         var textInput = document.getElementById(textInputId);
         if (fileInput.files.length > 0) {
-            textInput.value = fileInput.files[0].name;  // Update the text field with the chosen file 
+            textInput.value = fileInput.files[0].name;
         }
     }
 </script>

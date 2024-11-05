@@ -2,122 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Voice Converter Portal Entry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .header {
-            background-color: #2c3e50;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header img {
-            height: 50px;
-        }
-        .header h1 {
-            color: white;
-            margin: 0;
-            font-size: 24px;
-            font-weight: 400;
-        }
-        .container {
-            max-width: 500px;
-            margin: 80px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h2 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #2c3e50;
-            font-weight: 400;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label {
-            font-size: 16px;
-            color: #555;
-            margin: 15px 0 5px;
-        }
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-        }
-        button {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #1a252f;
-        }
-        .welcome-message {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;  /* Remove bullet points */
-            padding-left: 0;        /* Remove left padding */
-        }
-        li {
-            color: red;             /* Style error messages in red */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gradient-to-b from-white to-blue-300 text-gray-800 font-sans flex items-center justify-center min-h-screen">
 
-<!-- Header with logo -->
-<div class="header">
-    <img src="{{ url_for('static', filename='images/HydroDevs Logo.png') }}" alt="HydroDevs Logo">
-    <h1>HydroDevs</h1>
-</div>
+<div class="w-full max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
+    <!-- Header with logo -->
+    <div class="bg-gray-800 p-4 flex items-center justify-between">
+        <img src="{{ url_for('static', filename='images/HydroDevs Logo.png') }}" alt="HydroDevs Logo" class="h-12">
+        <h1 class="text-white text-2xl font-light">HydroDevs</h1>
+    </div>
 
-<div class="container">
-    <h2>Welcome to the AI Voice Converter Portal Entry</h2>
-    <p class="welcome-message">Please enter your ElevenLabs API key to access the voice conversion portal.</p>
+    <!-- Main content -->
+    <div class="bg-white p-8 text-center">
+        <h2 class="text-2xl font-light text-gray-800">Welcome to the AI Voice Converter Portal Entry</h2>
+        <p class="text-lg text-gray-600 mt-4 mb-6">Please enter your ElevenLabs API key to access the voice conversion portal.</p>
 
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul>
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="list-none space-y-2">
+                    {% for category, message in messages %}
+                        <li class="text-red-600">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
 
-    <!-- API Key entry form -->
-    <form action="{{ url_for('verify_key') }}" method="POST">
-        <label for="api_key">ElevenLabs API Key:</label>
-        <input type="password" id="api_key" name="api_key" required>
-        <button type="submit">Submit</button>
-    </form>
+        <!-- API Key entry form -->
+        <form action="{{ url_for('verify_key') }}" method="POST" class="flex flex-col items-center space-y-4">
+            <label for="api_key" class="text-gray-700 font-medium">ElevenLabs API Key:</label>
+            <input type="password" id="api_key" name="api_key" required class="w-full px-4 py-2 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-900 transition duration-300">Submit</button>
+        </form>
+    </div>
 </div>
 
 </body>

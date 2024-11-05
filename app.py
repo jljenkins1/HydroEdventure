@@ -50,17 +50,29 @@ def verify_key():
     response = requests.get('https://api.elevenlabs.io/v1/voices', headers=headers)
 
     if response.status_code == 200:
-        # Store JWT Token in the session
+        # Store JWT Token and logged_in status in the session
         session['token'] = token
+        session['logged_in'] = True
         return redirect(url_for('upload_page'))  # Redirect to file upload page
     else:
         flash('Invalid API key. Please try again.', 'error')
         return redirect(url_for('index'))
 
+# Route for logging out
+@app.route('/logout')
+def logout():
+    session.clear()  # Clear session to log out the user
+    flash('You have been logged out.', 'info')
+    return redirect(url_for('index'))  # Redirect back to the API key entry page
+
 # Define the route to show the file upload form after verifying the API key
 @app.route('/upload_page')
 def upload_page():
-    return render_template('upload_files.html')  # Second page for file upload
+    # Ensure that only logged-in users can access the upload page
+    if not session.get('logged_in'):
+        flash('Please log in first.', 'error')
+        return redirect(url_for('index'))  # Redirect to the API key page if not logged in
+    return render_template('upload_files.html')  # Render the file upload page
 
 # Route for handling the file uploads and processing
 @app.route('/upload', methods=['POST'])
@@ -119,9 +131,9 @@ def upload_files():
         os.makedirs(npc_folder, exist_ok=True)
 
         # Get unique player voices from entries
-        player_voice_ids = set(entry.voiceID for entry in entries if entry.characterName == "Player")
-        for voice_id in player_voice_ids:
-            folder_name = f"Player_{voice_id}"
+        player_voices = {(entry.voiceID, entry.voiceName) for entry in entries if entry.characterName == "Player"}
+        for voice_id, voice_name in player_voices:
+            folder_name = f"Player_{voice_name}"
             folder_path = os.path.join(output_base_dir, folder_name)
             player_folders[voice_id] = folder_path
             os.makedirs(folder_path, exist_ok=True)
