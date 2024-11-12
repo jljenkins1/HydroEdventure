@@ -81,6 +81,7 @@ def upload_files():
         # Confirm that both files have been submitted
         dialogue_file = request.files.get('dialogue')
         voice_file = request.files.get('voices')
+        output_format = request.form.get('output_format', 'ogg')  # Default to 'ogg' if not provided
 
         if not dialogue_file or not voice_file:
             flash('Both dialogue and voice files are required.', 'error')
@@ -103,6 +104,10 @@ def upload_files():
         # Process the files
         entries = parse_dialogue_csv(dialogue_file_path, voices_file_path)
 
+        if not entries:
+            flash('No valid entries found in the uploaded files.', 'error')
+            return redirect(request.url)
+
         # Retrieve the JWT token from the session instead of API key
         token = session.get('token')
         if not token:
@@ -124,16 +129,15 @@ def upload_files():
 
         # Base output directory
         output_base_dir = os.path.join(app.config['UPLOAD_FOLDER'], f"voice_files_{date_stamp}")
+        os.makedirs(output_base_dir, exist_ok=True)
 
-        # Character-specific folders
+        # Get unique player voice IDs
+        player_voice_ids = sorted(set(entry.voiceID for entry in entries if entry.characterName == "Player"))
+
+        # Map voice IDs to Player1, Player2, etc.
         player_folders = {}
-        npc_folder = os.path.join(output_base_dir, "NPC")
-        os.makedirs(npc_folder, exist_ok=True)
-
-        # Get unique player voices from entries
-        player_voices = {(entry.voiceID, entry.voiceName) for entry in entries if entry.characterName == "Player"}
-        for voice_id, voice_name in player_voices:
-            folder_name = f"Player_{voice_name}"
+        for index, voice_id in enumerate(player_voice_ids, start=1):
+            folder_name = f"Player{index}"
             folder_path = os.path.join(output_base_dir, folder_name)
             player_folders[voice_id] = folder_path
             os.makedirs(folder_path, exist_ok=True)
@@ -151,14 +155,22 @@ def upload_files():
             # Determine folder based on character type
             if entry.characterName == "Player":
                 folder_path = player_folders.get(voice_id)
+                if not folder_path:
+                    flash(f"Voice ID {voice_id} not assigned to any player folder.", 'error')
+                    continue  # Skip if voice_id not found
             else:
-                folder_path = npc_folder
+                folder_path = output_base_dir  # Save NPC lines directly in main folder
+
+            # Set the Accept header based on the selected output format
+            accept_header = 'audio/ogg'  # Default to 'ogg'
+            if output_format == 'mp3':
+                accept_header = 'audio/mpeg'
 
             # Generate audio request
             url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
             headers = {
                 "xi-api-key": api_key,
-                "Accept": "audio/mpeg",
+                "Accept": accept_header,
                 "Content-Type": "application/json"
             }
             data = {
@@ -174,7 +186,7 @@ def upload_files():
             response = requests.post(url, json=data, headers=headers)
 
             if response.status_code == 200:
-                audio_filename = f"{entry.getTag()}_{date_stamp}.mp3"
+                audio_filename = f"{entry.getTag()}_{date_stamp}.{output_format}"
                 audio_file_path = os.path.join(folder_path, audio_filename)
                 with open(audio_file_path, 'wb') as f:
                     f.write(response.content)
