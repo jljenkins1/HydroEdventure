@@ -125,21 +125,13 @@ def upload_files():
         # Base output directory
         output_base_dir = os.path.join(app.config['UPLOAD_FOLDER'], f"voice_files_{date_stamp}")
 
-        # Character-specific folders
-        player_folders = {}
-        npc_folder = os.path.join(output_base_dir, "NPC")
-        os.makedirs(npc_folder, exist_ok=True)
-
-        # Get unique player voices from entries
-        player_voices = {(entry.voiceID, entry.voiceName) for entry in entries if entry.characterName == "Player"}
-        for voice_id, voice_name in player_voices:
-            folder_name = f"Player_{voice_name}"
-            folder_path = os.path.join(output_base_dir, folder_name)
-            player_folders[voice_id] = folder_path
+        # Character-specific folders for players
+        player_folders = {f"Player{i}": os.path.join(output_base_dir, f"Player{i}") for i in range(1, 6)}
+        for folder_path in player_folders.values():
             os.makedirs(folder_path, exist_ok=True)
 
         # Generate audio files using ElevenLabs API
-        for entry in entries[:31]:
+        for entry in entries[:10]:  # Limit to 10 entries for testing
             text = entry.getCleanText()
             if not text:
                 continue  # Skip entries with no text
@@ -149,10 +141,7 @@ def upload_files():
                 continue  # Skip entries with no voice ID
 
             # Determine folder based on character type
-            if entry.characterName == "Player":
-                folder_path = player_folders.get(voice_id)
-            else:
-                folder_path = npc_folder
+            folder_path = player_folders.get(entry.getTag(), output_base_dir)  # Player folders or base for NPCs
 
             # Generate audio request
             url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
