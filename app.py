@@ -10,12 +10,12 @@ from parsing_functions import parse_dialogue_csv
 from Entry import Entry
 from datetime import datetime
 import jwt
-import secrets
+import threading
 
 # Set up the Flask application and define the upload directory.
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.secret_key = 'your_secret_key_here'  # Replace with your actual secret key
+app.secret_key = os.urandom(24)  # Random secret key
 
 # Configure server-side session
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -27,7 +27,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Define a consistent secret key for JWT encoding/decoding
-JWT_SECRET_KEY = 'jwt_secret_key_here'  # Replace with a secure key
+JWT_SECRET_KEY = os.urandom(24)  # Random JWT secret key
 
 # Define the route for the API key input
 @app.route('/')
@@ -73,6 +73,57 @@ def upload_page():
         flash('Please log in first.', 'error')
         return redirect(url_for('index'))  # Redirect to the API key page if not logged in
     return render_template('upload_files.html')  # Render the file upload page
+
+# Define a function to create a directory if it does not exist
+def create_directory(path):
+    if not os.path.exists(path):
+        os.makedirs(path) 
+        print(f"Directory created: {path}") 
+    else: 
+        print(f"Directory already exists: {path}")
+
+# Define a function to generate the audio files for each dialogue line
+def generate_audio_file(entry, api_key, folder_path, date_stamp, output_format):
+    text = entry.getCleanText()
+    if not text:
+        return # Skip entries with no text
+        
+    voice_id = entry.getVoiceID()
+    if not voice_id:
+        return # Skip entries with no voice ID
+        
+    # Set the Accept header based on the selected output format
+    accept_header = 'audio/ogg'  # Default to 'ogg'
+    if output_format == 'mp3':
+        accept_header = 'audio/mpeg'
+        
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+    headers = { 
+        "xi-api-key": api_key,
+        "Accept": accept_header,
+        "Content-Type": "application/json"
+    } 
+    data = {
+        "text": text,
+        "model_id": "eleven_multilingual_v2",
+        "voice_settings": {
+            "stability": 0.5,
+            "similarity_boost": 0.5,
+            "style": 0.5
+        } 
+    }
+    
+    response = requests.post(url, json=data, headers=headers)
+    
+    if response.status_code == 200:
+        audio_filename = f"{entry.getTag()}_{date_stamp}.mp3"
+        audio_file_path = os.path.join(folder_path, audio_filename) 
+        create_directory(folder_path) # Ensure directory exists
+        with open(audio_file_path, 'wb') as f:
+            f.write(response.content)
+    else:
+        # Log the error
+        print(f"Error generating audio for entry {entry.getTag()}: {response.status_code} - {response.text}")
 
 # Route for handling the file uploads and processing
 @app.route('/upload', methods=['POST'])
@@ -143,15 +194,22 @@ def upload_files():
             os.makedirs(folder_path, exist_ok=True)
 
         # Generate audio files using ElevenLabs API
+        threads = []
         for entry in entries[:31]:
-            text = entry.getCleanText()
-            if not text:
-                continue  # Skip entries with no text
+            if entry.characterName == "Player":
+                folder_path = player_folders.get(entry.getVoiceID())
+                if not folder_path:
+                    flash(f"Voice ID {voice_id} not assigned to any player folder.", 'error')
+            else: 
+                folder_path = output_base_dir # Save NPC lines to main folder
+                
+            thread = threading.Thread(target=generate_audio_file, args=(entry, api_key, folder_path, date_stamp)) 
+            threads.append(thread) 
+            thread.start()
 
-            voice_id = entry.getVoiceID()
-            if not voice_id:
-                continue  # Skip entries with no voice ID
-
+        # Wait for threads to complete!
+        for thread in threads:
+            thread.join()
             # Determine folder based on character type
             if entry.characterName == "Player":
                 folder_path = player_folders.get(voice_id)
@@ -160,39 +218,6 @@ def upload_files():
                     continue  # Skip if voice_id not found
             else:
                 folder_path = output_base_dir  # Save NPC lines directly in main folder
-
-            # Set the Accept header based on the selected output format
-            accept_header = 'audio/ogg'  # Default to 'ogg'
-            if output_format == 'mp3':
-                accept_header = 'audio/mpeg'
-
-            # Generate audio request
-            url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
-            headers = {
-                "xi-api-key": api_key,
-                "Accept": accept_header,
-                "Content-Type": "application/json"
-            }
-            data = {
-                "text": text,
-                "model_id": "eleven_multilingual_v2",
-                "voice_settings": {
-                    "stability": 0.5,
-                    "similarity_boost": 0.5,
-                    "style": 0.5
-                }
-            }
-
-            response = requests.post(url, json=data, headers=headers)
-
-            if response.status_code == 200:
-                audio_filename = f"{entry.getTag()}_{date_stamp}.{output_format}"
-                audio_file_path = os.path.join(folder_path, audio_filename)
-                with open(audio_file_path, 'wb') as f:
-                    f.write(response.content)
-            else:
-                # Log the error and continue
-                flash(f"Error generating audio for entry {entry.getTag()}: {response.status_code}", 'error')
 
         # Create a zip file of the audio files for download
         zip_filename = f'voice_files_{date_stamp}.zip'
