@@ -4,82 +4,117 @@
     <meta charset="UTF-8">
     <title>Upload Files - Voice Converter Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-white to-blue-300 text-gray-800 font-sans flex items-center justify-center min-h-screen">
+<body class="bg-gradient-to-b from-white to-blue-300 text-gray-800 font-sans min-h-screen flex flex-col items-center">
 
-<div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg text-center mx-auto">
-    <!-- Header with logo -->
-    <div class="bg-gray-800 p-4 flex items-center justify-between rounded-t-lg mb-6">
-        <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Mission Hydrosci Logo" class="h-12">
-        <h1 class="text-white text-2xl font-light">Mission Hydrosci</h1>
-        <!-- Logout Link -->
-        <a href="{{ url_for('logout') }}" class="text-white bg-red-500 py-2 px-4 rounded hover:bg-red-600 transition duration-300">
-            Logout
-        </a>
-    </div>
+    <!-- Main Container -->
+    <div class="w-full max-w-4xl p-8">
 
-    <h2 class="text-2xl font-light text-gray-800">Welcome to the Voice Converter Portal</h2>
-    <p class="text-lg text-gray-600 mt-4 mb-6">Please upload your dialogue CSV and Voice Assignments JSON files.</p>
-
-    <!-- Flash Messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul class="list-none space-y-2">
-                {% for category, message in messages %}
-                    <li class="text-red-600">{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-
-    <!-- File upload form -->
-    <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data" class="flex flex-col items-center space-y-4">
-        <label for="dialogue" class="text-gray-700 font-medium">Upload Dialogue CSV:</label>
-        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300">
-            <input type="file" name="dialogue" id="dialogue" accept=".csv" required onchange="updateFileName('dialogue', 'dialogue-file-name')" class="hidden">
-            Choose File
-        </label>
-        <input type="text" id="dialogue-file-name" placeholder="Enter or choose file name" required
-               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700">
-
-        <label for="voices" class="text-gray-700 font-medium">Upload Voice Assignments JSON:</label>
-        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300">
-            <input type="file" name="voices" id="voices" accept=".json" required onchange="updateFileName('voices', 'voices-file-name')" class="hidden">
-            Choose File
-        </label>
-        <input type="text" id="voices-file-name" placeholder="Enter or choose file name" required
-               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700">
-
-        <!-- Section for selecting output format -->
-        <label class="text-gray-700 font-medium">Select Output Format:</label>
-        <div class="flex space-x-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="output_format" value="ogg" checked class="form-radio text-blue-600">
-                <span class="ml-2 text-gray-700">OGG</span>
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="output_format" value="mp3" class="form-radio text-blue-600">
-                <span class="ml-2 text-gray-700">MP3</span>
-            </label>
+        <!-- Header with logo -->
+        <div class="bg-gray-800 p-4 flex items-center justify-between rounded-t-lg mb-6">
+            <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Mission Hydrosci Logo" class="h-12">
+            <h1 class="text-white text-2xl font-light">Mission Hydrosci</h1>
+            <!-- Logout Link -->
+            <a href="{{ url_for('logout') }}" class="text-white bg-red-500 py-2 px-4 rounded hover:bg-red-600 transition duration-300">
+                Logout
+            </a>
         </div>
 
-        <!-- Submit button -->
-        <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-900 transition duration-300">Submit</button>
-    </form>
-</div>
+        <!-- Content Wrapper -->
+        <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
 
-<script>
-    // Update file name when file is chosen
-    function updateFileName(inputId, textInputId) {
-        var fileInput = document.getElementById(inputId);
-        var textInput = document.getElementById(textInputId);
-        if (fileInput.files.length > 0) {
-            textInput.value = fileInput.files[0].name;
+            <!-- Left Column: Upload Form -->
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2">
+                <h2 class="text-2xl font-light text-gray-800">Upload Files</h2>
+                <p class="text-lg text-gray-600 mt-4 mb-6">Please upload your Dialogue CSV and Voice Assignments JSON files.</p>
+
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <ul class="list-none space-y-2">
+                            {% for category, message in messages %}
+                                <li class="text-red-600">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+
+                <!-- File upload form -->
+                <form action="{{ url_for('upload_files') }}" method="POST" enctype="multipart/form-data" class="flex flex-col space-y-4">
+                    <!-- Dialogue CSV Upload -->
+                    <div>
+                        <label for="dialogue" class="text-gray-700 font-medium">Upload Dialogue CSV:</label>
+                        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300 mt-2 inline-block">
+                            <input type="file" name="dialogue" id="dialogue" accept=".csv" required onchange="updateFileName('dialogue', 'dialogue-file-name')" class="hidden">
+                            Choose File
+                        </label>
+                        <input type="text" id="dialogue-file-name" placeholder="Enter or choose file name" required
+                               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700 mt-2">
+                    </div>
+
+                    <!-- Voice Assignments JSON Upload -->
+                    <div>
+                        <label for="voices" class="text-gray-700 font-medium">Upload Voice Assignments JSON:</label>
+                        <label class="custom-file-upload bg-blue-500 text-white py-3 px-5 rounded cursor-pointer hover:bg-blue-600 transition duration-300 mt-2 inline-block">
+                            <input type="file" name="voices" id="voices" accept=".json" required onchange="updateFileName('voices', 'voices-file-name')" class="hidden">
+                            Choose File
+                        </label>
+                        <input type="text" id="voices-file-name" placeholder="Enter or choose file name" required
+                               class="file-name-input w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700 mt-2">
+                    </div>
+
+                    <!-- Output Format Selection -->
+                    <div>
+                        <label class="text-gray-700 font-medium">Select Output Format:</label>
+                        <div class="flex space-x-4 mt-2">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="output_format" value="ogg" checked class="form-radio text-blue-600">
+                                <span class="ml-2 text-gray-700">OGG</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="output_format" value="mp3" class="form-radio text-blue-600">
+                                <span class="ml-2 text-gray-700">MP3</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-900 transition duration-300">Submit</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Check Job Status -->
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2">
+                <h2 class="text-2xl font-light text-gray-800">Check Job Status</h2>
+                <p class="text-lg text-gray-600 mt-4 mb-6">Enter your Job ID below to check the status of your processing job.</p>
+
+                <!-- Form to check job status by job_id -->
+                <form action="{{ url_for('job_status_check') }}" method="POST" class="flex flex-col space-y-4">
+                    <div>
+                        <label for="job_id" class="text-gray-700 font-medium">Job ID:</label>
+                        <input type="text" id="job_id" name="job_id" required
+                               class="w-full p-3 text-base border border-gray-300 rounded bg-gray-50 text-gray-700 mt-2">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded hover:bg-blue-600 transition duration-300">Check Status</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Update file name when file is chosen
+        function updateFileName(inputId, textInputId) {
+            var fileInput = document.getElementById(inputId);
+            var textInput = document.getElementById(textInputId);
+            if (fileInput.files.length > 0) {
+                textInput.value = fileInput.files[0].name;
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
