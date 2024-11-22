@@ -16,7 +16,7 @@ import jwt
 # Set up the Flask application and define the upload directory.
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.secret_key = 'your_secret_key_here'  # Replace with your actual secret key
+app.secret_key = os.urandom(24)  # Random secret key
 
 # Configure server-side session
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -31,7 +31,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Define a consistent secret key for JWT encoding/decoding
-JWT_SECRET_KEY = 'jwt_secret_key_here'  # Replace with a secure key
+JWT_SECRET_KEY = os.urandom(24)  # Random JWT secret key
 
 # Define the route for the API key input
 @app.route('/')
