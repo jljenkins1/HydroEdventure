@@ -125,7 +125,6 @@ def generate_audio_file(entry, api_key, folder_path, date_stamp, output_format):
         # Log the error
         print(f"Error generating audio for entry {entry.getTag()}: {response.status_code} - {response.text}")
 
-
 # Route for handling the file uploads and processing
 @app.route('/upload', methods=['POST'])
 def upload_files():
@@ -219,7 +218,6 @@ def upload_files():
                     continue  # Skip if voice_id not found
             else:
                 folder_path = output_base_dir  # Save NPC lines directly in main folder
-
 
         # Create a zip file of the audio files for download
         zip_filename = f'voice_files_{date_stamp}.zip'
