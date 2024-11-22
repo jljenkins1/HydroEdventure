@@ -83,7 +83,7 @@ def create_directory(path):
         print(f"Directory already exists: {path}")
 
 # Define a function to generate the audio files for each dialogue line
-def generate_audio_file(entry, api_key, folder_path, date_stamp):
+def generate_audio_file(entry, api_key, folder_path, date_stamp, output_format):
     text = entry.getCleanText()
     if not text:
         return # Skip entries with no text
@@ -100,7 +100,7 @@ def generate_audio_file(entry, api_key, folder_path, date_stamp):
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
     headers = { 
         "xi-api-key": api_key,
-        "Accept": "audio/mpeg",
+        "Accept": accept_header,
         "Content-Type": "application/json"
     } 
     data = {
