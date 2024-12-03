@@ -1,0 +1,50 @@
+<!-- job_status.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Clipboard.js for copying functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+</head>
+<body class="bg-gradient-to-b from-white to-blue-300 text-gray-800 font-sans flex items-center justify-center min-h-screen">
+<div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg text-center mx-auto">
+    <h2 class="text-2xl font-light text-gray-800">Job Status</h2>
+    <p class="text-lg text-gray-600 mt-4 mb-6">
+        {% if zip_available %}
+            Your job with ID <strong>{{ job_id }}</strong> is complete! Click the button below to download your files.
+        {% else %}
+            Your job with ID <strong>{{ job_id }}</strong> is currently processing. Please check back later.
+            <br><br>
+            <strong>Don't lose your Job ID!</strong> You will need it to check the status of your job.
+            <br><br>
+            <!-- Copy Job ID button -->
+            <button id="copyButton" data-clipboard-text="{{ job_id }}" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300 inline-block">Copy Job ID</button>
+        {% endif %}
+    </p>
+    {% if zip_available %}
+        <a href="{{ download_url }}" class="w-full bg-blue-500 text-white py-3 rounded hover:bg-blue-600 transition duration-300 inline-block" download>Download Files</a>
+    {% else %}
+        <a href="{{ url_for('upload_page') }}" class="w-full bg-gray-800 text-white py-3 rounded hover:bg-gray-900 transition duration-300 inline-block mt-4">Return to Upload Page</a>
+    {% endif %}
+</div>
+
+<script>
+    // Initialize Clipboard.js for the copy button
+    var clipboard = new ClipboardJS('#copyButton');
+
+    clipboard.on('success', function(e) {
+        alert('Job ID copied to clipboard!');
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        alert('Failed to copy Job ID. Please copy it manually.');
+    });
+</script>
+
+</body>
+</html>
