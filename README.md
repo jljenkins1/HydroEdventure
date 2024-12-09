@@ -90,9 +90,12 @@ The general steps taken are
 2. Connect EC2 by SSH
 3. Change directory to corresponding folder
 4. Start app.py
-5. go to browser to access 
+5. go to browser to access
+
 In regards to AWS the file paths will change dependent on where the folder location is saved, the EC2 and IP will remain constant
+
 Here are the generic commands used to deploy on AWS once folder is on local.
+
 1. scp -i "filepathtokey.pem" -r "filepathtolocalfolder" ec2-user@3.144.6.52:/home/ec2-user/
 2. ssh -i "filepathtokey.pem" ec2-user@3.144.6.52:/home/ec2-user/
 3. cd /home/ec2-user/<folder>
