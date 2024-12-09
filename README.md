@@ -10,7 +10,7 @@ HydroEdventure is a Python-based tool designed to streamline the generation of v
 - [Installation](#installation)
 - [Usage](#usage)
 - [Requirements](#requirements)
-- [Deployment on AWS](#Deployment on AWS)
+- [Deployment on AWS](#deployment-on-aws)
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
@@ -84,7 +84,7 @@ To install the required dependencies, simply run:
 ```bash
 pip install -r requirements.txt
 ```
-# **Deployment on AWS**
+### **Deployment on AWS**
 The general steps taken are
 1. Secure and recursive file transfer with SSH key
 2. Connect EC2 by SSH
@@ -106,6 +106,8 @@ Here are the specific commands used during our AWS deployment
 3. cd /home/ec2-user/HYDRO-DEVS_Submission
 4. python3 app.py   
 5. then navigate to http://3.144.6.52:5000 within a browser
+
+** The hydrodevs ssh key is only in zipped submission not on GitHub
 
 ## **Contributing**
 
