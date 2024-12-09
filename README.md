@@ -10,6 +10,7 @@ HydroEdventure is a Python-based tool designed to streamline the generation of v
 - [Installation](#installation)
 - [Usage](#usage)
 - [Requirements](#requirements)
+- [Deployment on AWS](#Deployment on AWS)
 - [Contributing](#contributing)
 - [License](#license)
 - [Credits](#credits)
@@ -83,6 +84,29 @@ To install the required dependencies, simply run:
 ```bash
 pip install -r requirements.txt
 ```
+# **Deployment on AWS**
+The general steps taken are
+1. Secure and recursive file transfer with SSH key
+2. Connect EC2 by SSH
+3. Change directory to corresponding folder
+4. Start app.py
+5. go to browser to access 
+In regards to AWS the file paths will change dependent on where the folder location is saved, the EC2 and IP will remain constant
+Here are the generic commands used to deploy on AWS once folder is on local.
+1. scp -i "filepathtokey.pem" -r "filepathtolocalfolder" ec2-user@3.144.6.52:/home/ec2-user/
+2. ssh -i "filepathtokey.pem" ec2-user@3.144.6.52:/home/ec2-user/
+3. cd /home/ec2-user/<folder>
+4. python3 app.py
+5. then navigate to http://3.144.6.52:5000 within a browser
+
+
+Here are the specific commands used during our AWS deployment
+1. scp -i "C:\Users\Cole\Downloads\Capstone\HYDRO-DEVS_Submission\hydrodevskeypair.pem" -r "C:\Users\Cole\Downloads\Capstone\HYDRO-DEVS_Submission" ec2-user@3.144.6.52:/home/ec2-user/
+2. ssh -i "C:\Users\Cole\Downloads\Capstone\HYDRO-DEVS_Submission\hydrodevskeypair.pem" ec2-user@3.144.6.52
+3. cd /home/ec2-user/HYDRO-DEVS_Submission
+4. python3 app.py   
+5. then navigate to http://3.144.6.52:5000 within a browser
+
 ## **Contributing**
 
 Contributions are welcome! To contribute:
