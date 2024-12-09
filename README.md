@@ -107,7 +107,7 @@ Here are the specific commands used during our AWS deployment
 4. python3 app.py   
 5. then navigate to http://3.144.6.52:5000 within a browser
 
-** The hydrodevs ssh key is only in zipped submission not on GitHub
+** The Hydro-Devs ssh key is only in zipped submission not on GitHub
 
 ## **Contributing**
 
